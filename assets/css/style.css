@@ -1,0 +1,326 @@
+/*Universal selector*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Color selectors */
+:root {
+--text: #3A606E;
+--xanadu: #8fa18f;
+--off-white: #e0e0e0;
+--labels: #2c3133;
+}
+
+/* *************************** */
+/*     Element selectors       */
+/* *************************** */
+
+/*Background color and font family*/
+body {
+    background-color: var(--off-white);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+/*Header formatting, font, and color*/
+header {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: var(--labels);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Mary Elenius formatting and font */
+h1 {
+    font-weight: bolder;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+/* Aside headers formatting, font, and color */
+h3 {
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: right;
+    color: var(--labels);
+}
+
+/*Nav bar within header formatting, font, and color*/
+nav {
+    margin: 7px;
+    margin-right: 1%;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+/* Section formatting */
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: spacearound;
+}
+
+/* Aside formatting */
+aside {
+    width: 10%;
+    margin: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+/* Lines after aside */
+aside::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 110%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 100%;
+    width: 2px;
+    background: var(--labels) 
+}
+
+/* Article formatting */
+article {
+    width: 80%;
+    margin: 10px
+}
+
+/*Paragraph formatting, font, and color*/
+p {
+    margin: 12px;
+    color: var(--text);
+    font-size: large;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* *************************** */
+/*    Formatting for header    */
+/* *************************** */
+
+/* Nav formatting and color */
+.nav {
+    text-decoration: none;
+    padding: 15px 20px;
+    letter-spacing: 2px;
+    position: relative;
+    white-space: nowrap;
+    font-size: large;
+    margin: 4px;
+    font-weight: 500;
+}
+
+/* Formatting for line animation */
+.nav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 2px;
+    width: 0;
+    transition: all 0.3s ease 0.2s;
+}
+
+.nav:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+a.top-nav {
+    color: var(--xanadu);
+}
+
+a.tnav::after {
+    background: var(--xanadu);
+}
+
+a.bottom-nav {
+    color: var(--text);
+    padding: 10px;
+}
+
+a.bottom-nav::after {
+    background: var(--text)
+}
+
+/* Banner formatting */
+.banner {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    position: absolute;
+    padding: 5px;
+}
+
+figcaption.subtitle-position {
+    bottom: 5px;
+    right: 2%;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+/* *************************** */
+/* Formatting for work section */
+/* *************************** */
+
+/* Containers for work section */
+.work {
+    position: relative;
+    width: 47%;
+    height: 100px;
+    border: 3px solid var(--xanadu);
+    margin: 10px;
+}
+
+/* Flexbox for work section */
+.work-flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Sizes larger container */
+div.large {
+    height: 200px;
+    width: 100%
+}
+
+/* Fills image to container */
+.image-fill {
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-position: top;
+}
+
+/* Adds caption on top of container */
+figcaption.work-position {
+    bottom: 25px;
+    left: -4px;
+    font-size: 15px;
+    font-weight: bolder;
+    white-space: pre;
+    text-align: left;
+}
+
+/* Labels */
+.labelbox {
+    margin: 3px;
+    padding: 3px;
+    border: 5px solid var(--xanadu);
+    background-color: var(--xanadu);
+    color: var(--labels);
+    white-space: nowrap;
+    display: flex;
+}
+
+div a img {
+    opacity: .75;
+    transition: .5s ease;
+}
+
+div a img:hover {
+    opacity: 1;
+}
+
+/* ****************************** */
+/* Formatting for media inquiries */
+/* ****************************** */
+
+/* Laptop */
+@media screen and (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    div.title {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
+    
+    section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    aside::after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0px;
+        bottom: -20px;
+        background: none repeat scroll 0 0 transparent;
+        height: 2px;
+        width: 100%;
+        background: var(--primary);
+    }
+
+    article {
+        width: 100%;
+    }
+
+    .section {
+        padding-right: 5%;
+        padding-left: 3%;
+    }
+}
+
+/* iPads and Tablets */
+@media screen and (max-width: 768px) {
+    div.large {
+    display: none;
+    }
+    .work {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        border: 3px solid var(--xanadu);
+        margin: 10px;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+
+    .banner {
+        display: none;
+    }
+    figcaption.work-position {
+        display: none;
+    }
+
+}
