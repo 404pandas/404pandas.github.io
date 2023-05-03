@@ -1,65 +1,153 @@
-# Advanced CSS: Portfolio
+<div align="center">
 
-## Description
+  <!-- Add badges using the following format: -->
+  <!-- ![Name](urlToShieldHere)(urlToGithubHere) -->
 
-This project is a portfolio homepage. The purposes of this project is to practice CSS elements and create a portfolio to update throughout my career.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Contributors](https://img.shields.io/github/contributors/404pandas/404pandas.github.io.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/404pandas.github.io/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/404pandas/404pandas.github.io.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/404pandas.github.io/network/members)
+[![Stargazers](https://img.shields.io/github/stars/404pandas/404pandas.github.io.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/404pandas.github.io/stargazers)
+[![Issues](https://img.shields.io/github/issues/404pandas/404pandas.github.io.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/404pandas.github.io/issues)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=appveyor&logo=linkedin&colorB=555)](https://linkedin.com/in/404pandas)
 
-### Tasks completed
-* GIVEN I need to sample a potential employee's previous work
-* WHEN I load their portfolio
-* THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
-* WHEN I click one of the links in the navigation
-* THEN the UI scrolls to the corresponding section
-* WHEN I click on the link to the section about their work
-* THEN the UI scrolls to a section with titled images of the developer's applications
-* WHEN I am presented with the developer's first application
-* THEN that application's image should be larger in size than the others
-* WHEN I click on the images of the applications
-* THEN I am taken to that deployed application
-* WHEN I resize the page or view the site on various screens and devices
-* THEN I am presented with a responsive layout that adapts to my viewport
+</div>
+
+<!-- PROJECT LOGO -->
+
+<div align="center">
+  <a href="https://github.com/404pandas/404pandas.github.io">
+    <img src="./assets/images/coded-logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">Pooh Weather Dashboard</h3>
+
+  <p align="center">
+Weather Dashboard using newly open source Pooh drawings    <br />
+    <a href="https://github.com/404pandas/404pandas.github.io"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/404pandas/404pandas.github.io">View Demo(Broken)</a>
+    ·
+    <a href="https://github.com/404pandas/404pandas.github.io/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/404pandas/404pandas.github.io/issues">Request Feature</a>
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+<!-- Add screenshots using the following format: -->
+<!-- ![Screenshot alt description](directPathOfScreenshots) -->
+
+This project was built with basic Javascript, Html, and CSS.
+It uses Materialize for a CSS framework.
+It also makes use of packages dayjs and jquery and gsap
+
+### Built With
+
+<!--  Dayjs, gsap, jquery, materialize, javascript, css, html, node.js npm vs code -->
+
+<div align="center">
+
+[![Day.js](https://img.shields.io/badge/Package-Dayjs-ff0000?style=plastic&logo=npm&logoWidth=10)](https://day.js.org/)
+[![GSAP](https://img.shields.io/badge/Package-GSAP-ff8000?style=plastic&logo=greensock&logoWidth=10)](https://https://greensock.com/gsap/)
+[![jQuery](https://img.shields.io/badge/Framework-jQuery-ffff00?style=plastic&logo=jQuery&logoWidth=10)](hhttps://api.jquery.com/)
+[![Materialize](https://img.shields.io/badge/Framework-Materialize-80ff00?style=plastic&logo=#757575&logoWidth=10)](https://materializecss.com/)
+[![Javascript](https://img.shields.io/badge/Language-JavaScript-ff0000?style=plastic&logo=JavaScript&logoWidth=10)](https://javascript.info/)
+[![CSS](https://img.shields.io/badge/Tool-CSS-ff8000?style=plastic&logo=css3&logoWidth=10)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Node.js](https://img.shields.io/badge/Framework-Node.js-ff0000?style=plastic&logo=Node.js&logoWidth=10)](https://nodejs.org/en/)
+[![npm](https://img.shields.io/badge/Tools-npm-ff0000?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/)
+[![VS Code](https://img.shields.io/badge/IDE-VSCode-ff0000?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://code.visualstudio.com/docs)
+
+</div>
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+Once completely built, this application will function as a deployed app on Netlify
+
+### Installation
+
+1. Clone the repo
+   git clone https://github.com/404pandas/404pandas.github.io.git
+
+<!-- USAGE EXAMPLES -->
 
 ## Usage
 
-Once deployed the application can be viewed in a traditional desktop web browser.  It it not yet optimized for smaller screens.
+Once the app is functional, screenshots will be added in this section.
 
-## Credits
-Collaborators on this project included instructional staff, TAs, and students from University of Central Florida.
- A special thanks to my hamster, Wojtek, for being awesome. He's not really a polish warbear, but he sure tries to be.
+<!-- ROADMAP -->
 
-## References and tutorials utilized
-* [https://www.w3schools.com/html/html5_semantic_elements.asp]
-* [https://www.markdownguide.org/basic-syntax]
-* [https://www.w3schools.com/cssref]
+## Roadmap
 
+- [ ] Pictures by weather
+- [ ] Animations by weather
+- [ ] Different themes
 
-## Links
-* [https://404pandas.github.io/working-portfolio]
-* [https://github.com/404pandas/working-portfolio]
+See the [open issues](https://github.com/404pandas/404pandas.github.io/issues) for a full list of proposed features (and known issues).
 
-## Screenshots
-![Screenshot of live image](https://github.com/404pandas/working-portfolio/blob/main/assets/images/live%20website.jpg?raw=true)
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
+
+<!-- LICENSE -->
 
 ## License
 
-MIT License
+This project is licensed under the MIT license.
 
-Copyright (c) [2022] [Mary Elenius]
+See LICENSE.txt for more information.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+<!-- CONTACT -->
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Contact
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Mary Elenius - mary.panda.jackson@gmail.com
+
+Project Link: [https://github.com/404pandas/404pandas.github.io](https://github.com/404pandas/404pandas.github.io)
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+I would like to give a big shoutout to my partner in crime and daughter, Yennefer! Every day she proves she is small yet mighty!

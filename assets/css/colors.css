@@ -1,0 +1,144 @@
+/* ============================================================ *\
+*         Mary Elenius Final Portfolio Colors Stylesheet         *
+*      https://coolors.co/8cd5cf-fafbfb-4f565d-d5d8d7-000000     *
+*                         05/02/2023                             *
+\* -----------------------------------------------------------  */
+
+/*                     Table of Contents:                       *\
+
+* COLOR VARIABLES
+
+* GRADIENTS
+
+* BACKGROUND COLORS
+
+* TEXT COLORS
+
+
+/* ----------------      Color Variables       ---------------- */
+:root {
+  --light-blue: #8cd5cf;
+  --white: #fafbfbff;
+  --light-gray: #4f565dff;
+  --dark-gray: #d5d8d7ff;
+  --black: #000000ff;
+
+  /* -------------------      Gradients       ------------------- */
+  /* Example use: var(--gradient-top) */
+
+  --gradient-top: linear-gradient(
+    0deg,
+    var(--light-blue),
+    var(--white),
+    var(--light-gray),
+    var(--dark-gray),
+    var(--black)
+  );
+  --gradient-right: linear-gradient(
+    90deg,
+    var(--light-blue),
+    var(--white),
+    var(--light-gray),
+    var(--dark-gray),
+    var(--black)
+  );
+  --gradient-bottom: linear-gradient(
+    180deg,
+    var(--light-blue),
+    var(--white),
+    var(--light-gray),
+    var(--dark-gray),
+    var(--black)
+  );
+  --gradient-left: linear-gradient(
+    270deg,
+    var(--light-blue),
+    var(--white),
+    var(--light-gray),
+    var(--dark-gray),
+    var(--black)
+  );
+  --gradient-top-right: linear-gradient(
+    45deg,
+    var(--light-blue),
+    var(--white),
+    var(--light-gray),
+    var(--dark-gray),
+    var(--black)
+  );
+  --gradient-bottom-right: linear-gradient(
+    135deg,
+    var(--light-blue),
+    var(--white),
+    var(--light-gray),
+    var(--dark-gray),
+    var(--black)
+  );
+  --gradient-top-left: linear-gradient(
+    225deg,
+    var(--light-blue),
+    var(--white),
+    var(--light-gray),
+    var(--dark-gray),
+    var(--black)
+  );
+  --gradient-bottom-left: linear-gradient(
+    315deg,
+    var(--light-blue),
+    var(--white),
+    var(--light-gray),
+    var(--dark-gray),
+    var(--black)
+  );
+  --gradient-radial: radial-gradient(
+    var(--light-blue),
+    var(--white),
+    var(--light-gray),
+    var(--dark-gray),
+    var(--black)
+  );
+}
+
+/* ---------------      Background Colors       --------------- */
+
+.light-blue-bg {
+  background-color: var(--light-blue) !important;
+}
+
+.white-bg {
+  background-color: var(--white) !important;
+}
+
+.light-gray-bg {
+  background-color: var(--light-gray) !important;
+}
+
+.dark-gray-bg {
+  background-color: var(--dark-gray) !important;
+}
+
+.black-bg {
+  background-color: var(--black) !important;
+}
+
+/* -----------------      Text Colors       ------------------ */
+
+.light-blue-fg {
+  color: var(--light-blue) !important;
+}
+
+.white-fg {
+  color: var(--white) !important;
+}
+
+.light-gray-fg {
+  color: var(--light-gray) !important;
+}
+
+.dark-gray-fg {
+  color: var(--dark-gray) !important;
+}
+
+.black-fg {
+  color: var(--black) !important;
+}

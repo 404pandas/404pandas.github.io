@@ -1,153 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Metadata -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <title>Document</title>
+    <!-- Normalize -->
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <!-- Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- User stylesheets -->
+    <link rel="stylesheet" href="./assets/css/colors.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Mary Elenius // Web Developer</title>
+    <link rel="stylesheet" href="./assets/css/glitch-name.css" />
   </head>
-
-  <!-- Body -->
   <body>
-    <!-- Header -->
-    <header>
-      <div class="labelbox">
-        <h1 style="text-indent: 50px">Mary Elenius</h1>
-      </div>
-      <nav>
-        <a class="top-nav nav" href="#aboutme">About Me</a>
-        <a class="top-nav nav" href="#work">Work</a>
-        <a class="top-nav nav" href="#contactme">Contact Me</a>
-        <a
-          class="top-nav nav"
-          href="https://www.linkedin.com/in/mary-elenius-256212151/"
-          >Resume</a
-        >
-      </nav>
-    </header>
-    <!-- Image with subtitle -->
-    <figure class="banner">
-      <img
-        class="image-fill"
-        src="./assets/images/header image.jpg"
-        alt="Blue tech banner"
-      />
-      <figcaption class="labelbox subtitle subtitle-position">
-        Working Portfolio
-      </figcaption>
-    </figure>
-    <!-- Main -->
-    <main>
-      <!-- About Me -->
-      <section class="section">
-        <aside id="aboutme">
-          <h3>About Me</h3>
-        </aside>
-        <article>
-          <p>
-            I am a veterinary technician by day and a new mom by night looking
-            to change careers so that I can work from home and spend as much
-            time with my daughter as possible! My anticipated graduation date
-            for full-stack bootcamp through University of Central Florida is
-            December 15, 2022.
-          </p>
-        </article>
+    <!-- Start of body row -->
+    <div class="row">
+      <aside class="col s5 offset-s6">
+        <img
+          class="panda-coding right"
+          src="./assets/images/panda-coding.png"
+          alt="Panda coding in front of a computer screen"
+        />
+        <div class="nameGlitch col s5 offset-s8">
+          <div class="glitch-container">
+            <!-- Start of glitch content -->
+            <div class="glitch" data-text="Mary Elenius">Mary Elenius</div>
+            <div class="glow">Mary Elenius</div>
+            <!-- End of glitch content -->
+            <!-- End of glitch container -->
+          </div>
+          <!-- Scan lines -->
+          <div class="scanlines"></div>
+        </div>
+      </aside>
+
+      <!-- Technology section -->
+      <section class="technologies">
+        <!-- Column formatting -->
+        <div class="col s9">
+          <div>Technologies</div>
+          <ul>
+            <li>Languages</li>
+            <li>Libraries</li>
+            <li>Frameworks</li>
+            <ul>
+              Databases
+            </ul>
+          </ul>
+          <!-- End of column -->
+        </div>
       </section>
-      <!-- Work -->
-      <section class="section">
-        <aside id="work">
-          <h3>Work</h3>
-        </aside>
-        <article class="work-flexbox">
-          <div class="work large">
-            <a href="https://404pandas.github.io/prework-study-guide/"
-              ><img
-                class="image-fill"
-                src="./assets/images/Pre-work study guide.jpg"
-                alt="Study Guide Pre-work Preview"
-            /></a>
-            <figcaption class="labelbox subtitle work-position">
-              Pre-WorkStudy Guide HTML/CSS
-            </figcaption>
-          </div>
-          <div class="work">
-            <a href="https://404pandas.github.io/challenge-horiseon/"
-              ><img
-                class="image-fill"
-                src="./assets/images/Horiseon.jpg"
-                alt="Horiseon Project Preview"
-            /></a>
-            <figcaption class="labelbox subtitle work-position">
-              Horiseon Refactor HTML/CSS
-            </figcaption>
-          </div>
-          <div class="work">
-            <a href="https://404pandas.github.io/password-generator/"
-              ><img
-                class="image-fill"
-                src="./assets/images/password generator updated.jpg"
-                alt="Password Generator Preview"
-            /></a>
-            <figcaption class="labelbox subtitle work-position">
-              Password Generator Javascript
-            </figcaption>
-          </div>
-          <div class="work">
-            <a href="https://github.com/MariaYConstanza/beach-day"
-              ><img
-                class="image-fill"
-                src="./assets/images/wow.jpg"
-                alt="Waves over Work Project Preview"
-            /></a>
-            <figcaption class="labelbox subtitle work-position">
-              Waves over Work
-            </figcaption>
-          </div>
-          <div class="work">
-            <a href="https://github.com/404pandas?tab=repositories/"
-              ><img
-                class="image-fill"
-                src="./assets/images/Coming Soon image.jpg"
-                alt="Coming Soon placeholder image"
-            /></a>
-            <figcaption class="labelbox subtitle work-position">
-              Coming Soon
-            </figcaption>
-          </div>
-        </article>
+      <!-- Work Section -->
+      <section class="work">
+        <!-- Column formatting -->
+        <div class="col s9">
+          <div>Work</div>
+          <ul>
+            <li>Example 1</li>
+            <li>Example 1</li>
+            <li>Example 1</li>
+            <li>Example 1</li>
+          </ul>
+          <!-- End of column -->
+        </div>
       </section>
-      <!-- Contact Me -->
-      <section class="section">
-        <aside id="contactme">
-          <h3>Contact Me</h3>
-        </aside>
-        <article>
-          <nav>
-            <a class="bottom-nav nav" href="tel: 7728342342">772.834.2342</a>
-            <a
-              class="bottom-nav nav"
-              href="mailto: mary.panda.jackson@gmail.com"
-              >mary.panda.jackson@gmail.com</a
-            >
-            <a class="bottom-nav nav" href="https://github.com/404Pandas"
-              >GitHub</a
-            >
-            <a
-              class="bottom-nav nav"
-              href="https://twitch.tv/marriage_consoleing"
-              >Twitch</a
-            >
-            <a
-              class="bottom-nav nav"
-              href="https://www.linkedin.com/in/mary-elenius-256212151/"
-              >LinkedIn</a
-            >
-          </nav>
-        </article>
+      <!-- About Me Section -->
+      <section class="about-me">
+        <!-- Column formatting -->
+        <div class="col s9">
+          <div>About Me</div>
+          <!-- End of column -->
+        </div>
       </section>
-    </main>
+      <!-- Contact Section -->
+      <section class="contact">
+        <!-- Column formatting -->
+        <div class="col s9">
+          <div>Contact</div>
+          <ul>
+            <li>Icon + Email</li>
+            <li>Icon + LinkedIn</li>
+            <li>Icon + Github</li>
+            <li>Icon + Twitch</li>
+            <li>Icon + Resume Download</li>
+          </ul>
+          <!-- TODO- contact form? -->
+          <!-- End of column -->
+        </div>
+      </section>
+      <!-- End of row -->
+    </div>
+    <!-- script link -->
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
