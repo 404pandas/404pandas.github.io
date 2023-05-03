@@ -146,7 +146,9 @@ a {
 *                          Components                            *
 \* -----------------------------------------------------------  */
 
-/*  Coding Panda */
+/* -------------------       Header       --------------------- */
+
+/*        Coding Panda        */
 .panda-coding {
   margin-top: 5%;
   margin-right: 5%;
@@ -154,17 +156,38 @@ a {
   width: 250px;
 }
 
-/* -------------------       Header       --------------------- */
+/*  Name */
+/* Relocated to assets/css/glitch-name.css */
 
-/* --------------------       Section       ---------------------- */
+/* ------------------       Sections       -------------------- */
 
-body {
-  font-family: "Oswald", sans-serif;
-  font-style: italic;
+/*  Technologies */
+#technologies {
+  position: absolute;
+  top: 14%;
+  left: 30%;
 }
 
-/* This formatting has been relocated to assets/css/glitch-name.css */
+/* Work */
+#work {
+  position: absolute;
+  left: 48%;
+  bottom: 10%;
+}
 
+/* About Me */
+#about-me {
+  position: absolute;
+  left: 7%;
+  bottom: 40%;
+}
+
+/* Contact */
+#contact {
+  position: absolute;
+  right: 13%;
+  bottom: 28%;
+}
 /* -------------------       Footer       --------------------- */
 
 /* -------------------       Button       --------------------- */
