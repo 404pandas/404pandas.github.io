@@ -71,7 +71,7 @@ a {
 
 html {
   margin: 0;
-  height: 500vh;
+  height: 100vh;
   color: var(--light-blue) !important;
   /* todo- add text shadow */
 }
@@ -82,9 +82,10 @@ html {
 body {
   background-image: url("../images/background-image.svg");
   background-repeat: repeat;
-  background-size: cover;
+  /* background-size: cover; */
   margin: 0;
-  height: 500vh;
+  width: 100vh;
+  aspect-ratio: auto;
 }
 
 /* A-hrefs */
@@ -254,7 +255,7 @@ a {
   background-repeat: no-repeat;
   min-height: 300px;
   position: absolute;
-  right: -10%;
+  right: 10%;
   top: 60%;
 }
 /* Resume */
@@ -262,9 +263,10 @@ a {
   background-image: url("../images/resume-container.svg");
   background-repeat: no-repeat;
   min-height: 150px;
+  width: auto;
   position: absolute;
-  left: 70%;
-  top: 110%;
+  right: 7%;
+  top: 100%;
 }
 /* Extra */
 #extra {
@@ -273,7 +275,7 @@ a {
   min-height: 200px;
   position: absolute;
   left: 5%;
-  top: 150%;
+  top: 130%;
 }
 /* -------------------       Footer       --------------------- */
 
@@ -304,3 +306,6 @@ a {
 \* -----------------------------------------------------------  */
 
 /* -------------       Example Sub-Heading       --------------- */
+
+.background-image {
+}

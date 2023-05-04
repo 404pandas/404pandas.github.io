@@ -236,6 +236,7 @@
 .scanlines {
   overflow: hidden;
   mix-blend-mode: difference;
+  height: 100vh;
 }
 
 .scanlines::before {
