@@ -19,14 +19,15 @@
 :root {
   --light-blue: #8cd5cf;
   --white: #fafbfbff;
-  --light-gray: #4f565dff;
-  --dark-gray: #d5d8d7ff;
+  --dark-gray: #4f565dff;
+  --light-gray: #d5d8d7ff;
   --black: #000000ff;
+}
 
-  /* -------------------      Gradients       ------------------- */
-  /* Example use: var(--gradient-top) */
+/* -------------------      Gradients       ------------------- */
+/* Example use: var(--gradient-top) */
 
-  /* --gradient-top: linear-gradient(
+/* --gradient-top: linear-gradient(
     0deg,
     var(--light-blue),
     var(--white),

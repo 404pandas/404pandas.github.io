@@ -58,8 +58,8 @@ a {
 :root {
   --light-blue: #8cd5cfff;
   --white: #fafbfbff;
-  --light-gray: #4f565dff;
-  --dark-gray: #d5d8d7ff;
+  --dark-gray: #4f565dff;
+  --light-gray: #d5d8d7ff;
   --black: #000000ff;
 }
 
@@ -72,6 +72,8 @@ a {
 html {
   margin: 0;
   height: 500vh;
+  color: var(--light-blue) !important;
+  /* todo- add text shadow */
 }
 
 /* ---------------------       Body       --------------------- */
@@ -83,6 +85,11 @@ body {
   background-size: cover;
   margin: 0;
   height: 500vh;
+}
+
+/* A-hrefs */
+a {
+  color: var(--light-blue) !important;
 }
 
 /* ============================================================ *\
@@ -173,13 +180,13 @@ body {
   left: 30%;
 }
 
-/* Column container (sets height to contain ul) */
+/* ~~~~~~ Column container (sets height to contain ul) ~~~~~ */
 #column-container {
   height: fit-content;
   margin-top: 4%;
 }
 
-/* Tab container */
+/* ~~~~~~ Tab container ~~~~~~ */
 #tab-container {
   display: flex !important;
   flex-direction: column !important;
@@ -188,7 +195,7 @@ body {
   height: 33px;
 }
 
-/* Fixes line height for the line items */
+/* ~~~~~~ Fixes line height for the line items ~~~~~~ */
 .user-style-tab {
   height: 33px !important;
   line-height: 33px !important;
