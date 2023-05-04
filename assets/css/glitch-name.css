@@ -30,7 +30,6 @@
   position: absolute;
   left: 2px;
   text-shadow: -5px 0 #8cd5cf;
-  overflow: hidden;
   top: 0;
   animation: noise-2 5s linear infinite alternate-reverse,
     textEffect 10s 10s infinite;
