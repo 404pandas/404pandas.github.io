@@ -66,22 +66,22 @@ a {
 *                           Elements                             *
 \* -----------------------------------------------------------  */
 
+/* html */
+
+html {
+  margin: 0;
+  height: 500vh;
+}
+
 /* ---------------------       Body       --------------------- */
 
 /*          Element Selector to apply background color          */
 body {
-  background-color: var(--off-white);
-  min-height: 500vh;
-}
-
-/* blue to gray to platinum */
-@keyframes body {
-  to {
-  }
-}
-
-a {
-  color: var(--light-orange);
+  background-image: url("../images/background-image.svg");
+  background-repeat: repeat;
+  background-size: cover;
+  margin: 0;
+  height: 500vh;
 }
 
 /* ============================================================ *\
@@ -163,30 +163,62 @@ a {
 
 /*  Technologies */
 #technologies {
+  background-image: url("../images/technology-container.svg");
+  background-repeat: no-repeat;
+  min-height: 300px;
   position: absolute;
-  top: 14%;
+  top: 30%;
   left: 30%;
 }
 
 /* Work */
 #work {
+  background-image: url("../images/work-container.svg");
+  background-repeat: no-repeat;
+  min-height: 300px;
   position: absolute;
-  left: 48%;
-  bottom: 10%;
+  left: 20%;
+  top: 90%;
+  stroke-width: 10px;
+  stroke: red;
 }
 
 /* About Me */
 #about-me {
+  background-image: url("../images/about-me-container.svg");
+  background-repeat: no-repeat;
+  min-height: 300px;
   position: absolute;
-  left: 7%;
-  bottom: 40%;
+  left: 5%;
+  top: 50%;
 }
 
 /* Contact */
 #contact {
+  background-image: url("../images/contact-container.svg");
+  background-repeat: no-repeat;
+  min-height: 300px;
   position: absolute;
-  right: 13%;
-  bottom: 28%;
+  right: -10%;
+  top: 60%;
+}
+/* Resume */
+#resume {
+  background-image: url("../images/resume-container.svg");
+  background-repeat: no-repeat;
+  min-height: 150px;
+  position: absolute;
+  left: 70%;
+  top: 110%;
+}
+/* Extra */
+#extra {
+  background-image: url("../images/extra-container.svg");
+  background-repeat: no-repeat;
+  min-height: 200px;
+  position: absolute;
+  left: 5%;
+  top: 150%;
 }
 /* -------------------       Footer       --------------------- */
 

@@ -1,0 +1,19 @@
+{
+  "name": "404pandas.github.io",
+  "version": "1.0.0",
+  "description": "Professional portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/404pandas/404pandas.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/404pandas/404pandas.github.io/issues"
+  },
+  "homepage": "https://github.com/404pandas/404pandas.github.io#readme"
+}

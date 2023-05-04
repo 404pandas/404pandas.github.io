@@ -26,7 +26,7 @@
   /* -------------------      Gradients       ------------------- */
   /* Example use: var(--gradient-top) */
 
-  --gradient-top: linear-gradient(
+  /* --gradient-top: linear-gradient(
     0deg,
     var(--light-blue),
     var(--white),
@@ -97,7 +97,7 @@
     var(--dark-gray),
     var(--black)
   );
-}
+} */
 
 /* ---------------      Background Colors       --------------- */
 
