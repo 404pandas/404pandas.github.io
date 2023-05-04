@@ -9,3 +9,6 @@ window.addEventListener(
   },
   false
 );
+
+// Tab Javascript
+var instance = M.Tabs.init(el, options);

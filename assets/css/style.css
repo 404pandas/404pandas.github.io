@@ -11,13 +11,14 @@
   ## Color Variables
 
 * ELEMENTS
+  ## HTML
   ## Body
 
 * FLEXBOX
 
 * TYPOGRAPHY 
-  ## Text wrap
   ## Font Family
+  ## Text wrap
   ## Code blocks
   ## Header Tags
 
@@ -150,8 +151,9 @@ body {
 
 /*        Coding Panda        */
 .panda-coding {
-  margin-top: 5%;
-  margin-right: 5%;
+  position: absolute;
+  top: 5%;
+  right: 5%;
   height: 250px;
   width: 250px;
 }
@@ -171,6 +173,54 @@ body {
   left: 30%;
 }
 
+/* Column container (sets height to contain ul) */
+#column-container {
+  height: fit-content;
+  margin-top: 4%;
+}
+
+/* Tab container */
+#tab-container {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow-x: visible;
+  overflow-y: visible;
+  height: 33px;
+}
+
+/* Fixes line height for the line items */
+.user-style-tab {
+  height: 33px !important;
+  line-height: 33px !important;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 1%;
+}
+
+/* Frameworks and Technologies */
+#tech1 {
+  background-image: url("../images/technology-modal.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+}
+/* Databases */
+#tech2 {
+  background-image: url("../images/technology-modal-2.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+}
+/* Languages */
+#tech3 {
+  background-image: url("../images/technology-modal-3.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+}
+/* Other Tools */
+#tech4 {
+  background-image: url("../images/technology-modal-4.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
 /* Work */
 #work {
   background-image: url("../images/work-container.svg");
@@ -179,8 +229,6 @@ body {
   position: absolute;
   left: 20%;
   top: 90%;
-  stroke-width: 10px;
-  stroke: red;
 }
 
 /* About Me */
@@ -241,66 +289,11 @@ body {
 *                           Helpers                              *
 \* -----------------------------------------------------------  */
 
-/* ------------------       Margin Auto       ------------------ */
-.marginAuto {
-  margin: 3% 3%;
-}
-
-.margin1 {
-  margin: 1% 1%;
-}
-
-/* ------------------       Margin Left Indent       ------------------ */
-.marginLeft5 {
-  margin-left: 5%;
-}
-
-.alignItemsC {
-  align-items: center;
-}
-
-.alignContentC {
-  align-content: center;
-}
-
-.cardWidth {
-  max-width: 300px;
-}
-
-.contentWidth {
-  max-width: 320px;
-}
-
-.width90 {
-  width: 90vw !important;
-}
-
-.width100 {
-  width: 100vw !important;
+.hidden {
+  display: none !important;
 }
 /* ============================================================ *\
 *                        Example Heading                         *
 \* -----------------------------------------------------------  */
 
 /* -------------       Example Sub-Heading       --------------- */
-
-.card-content {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-i {
-  padding: auto 0;
-}
-
-div p {
-  text-align: center;
-  padding-left: 10px;
-}
-
-.hidden {
-  display: none !important;
-}
