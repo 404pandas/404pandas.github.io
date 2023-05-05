@@ -178,8 +178,7 @@ h3 {
   position: absolute;
   top: 5%;
   right: 5%;
-  height: 30%;
-  width: 30%;
+  width: 10%;
 }
 
 /*  Name */
@@ -278,7 +277,7 @@ h3 {
 #resume {
   background-image: url("../images/resume-container.svg");
   background-repeat: no-repeat;
-  min-height: 150px;
+  min-height: 30%;
   width: auto;
   position: absolute;
   right: 7%;
@@ -289,7 +288,7 @@ h3 {
 #extra {
   background-image: url("../images/extra-container.svg");
   background-repeat: no-repeat;
-  min-height: 200px;
+  min-height: 40%;
   position: absolute;
   left: 8%;
   bottom: 5%;
@@ -371,6 +370,7 @@ h3 {
 
   #about-me {
     top: 3%;
+    left: 17%;
   }
 
   #contact {
@@ -378,19 +378,33 @@ h3 {
     right: 0%;
   }
 
+  .panda-coding {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 30%;
+  }
+
   #resume {
     top: 115%;
   }
 
-  #resume-download-container {
+  #resume-download-container h3 {
+    color: var(--light-blue);
     position: absolute;
-    right: 15%;
+    left: 50%;
+  }
+
+  #resume-download-container p {
+    position: absolute;
+    top: 54%;
+    right: 22%;
   }
 
   #resume-download-icon {
     position: absolute;
-    right: 40%;
-    top: 100%;
+    right: 26%;
+    top: 40%;
   }
 
   section#contact div#section-content {
