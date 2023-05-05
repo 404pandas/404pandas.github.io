@@ -31,6 +31,12 @@
 * HELPERS
  ## Margin Auto
 
+* MEDIA QUERIES
+ ## 	Mobile Devices <= 600px
+ ## Tablet Devices > 600px
+ ## Desktop Devices > 992px
+ ## Large Desktop Devices > 1200px
+
 /* ============================================================ *\
 *                     Universal & Variables                      *
 \* -----------------------------------------------------------  */
@@ -57,6 +63,7 @@ a {
 /*       Color variables for easy selection throughout CSS      */
 :root {
   --light-blue: #8cd5cfff;
+  --dark-blue: #121629;
   --white: #fafbfbff;
   --dark-gray: #4f565dff;
   --light-gray: #d5d8d7ff;
@@ -71,9 +78,10 @@ a {
 
 html {
   margin: 0;
-  height: 100vh;
+  /* height: 100vh; */
   color: var(--light-blue) !important;
   /* todo- add text shadow */
+  background-color: #121629;
 }
 
 /* ---------------------       Body       --------------------- */
@@ -84,8 +92,8 @@ body {
   background-repeat: repeat;
   background-size: cover;
   margin: 0;
-  width: 100vh;
-  height: 100vh;
+  width: 100vw;
+  /* height: 100vh; */
   aspect-ratio: auto;
 }
 
@@ -152,6 +160,13 @@ a {
   word-wrap: normal;
 }
 
+/* Heading Sizes */
+
+h3 {
+  font-size: 1rem !important;
+  color: var(--black);
+}
+
 /* ============================================================ *\
 *                          Components                            *
 \* -----------------------------------------------------------  */
@@ -163,8 +178,8 @@ a {
   position: absolute;
   top: 5%;
   right: 5%;
-  height: 250px;
-  width: 250px;
+  height: 30%;
+  width: 30%;
 }
 
 /*  Name */
@@ -175,8 +190,8 @@ a {
 /*  Technologies */
 #technologies {
   background-image: url("../images/technology-container.svg");
-  background-repeat: no-repeat;
-  min-height: 300px;
+  background-repeat: repeat-y;
+  min-height: 30%;
   position: absolute;
   top: 13%;
   left: 30%;
@@ -194,13 +209,13 @@ a {
   flex-direction: column !important;
   overflow-x: visible;
   overflow-y: visible;
-  height: 33px;
+  height: 70%;
 }
 
 /* ~~~~~~ Fixes line height for the line items ~~~~~~ */
 .user-style-tab {
-  height: 33px !important;
-  line-height: 33px !important;
+  height: 30% !important;
+  line-height: 30% !important;
   background: rgba(0, 0, 0, 0.1);
   margin: 1%;
 }
@@ -234,7 +249,7 @@ a {
 #work {
   background-image: url("../images/work-container.svg");
   background-repeat: no-repeat;
-  min-height: 300px;
+  min-height: 30%;
   position: absolute;
   left: 28%;
   top: 50%;
@@ -244,7 +259,7 @@ a {
 #about-me {
   background-image: url("../images/about-me-container.svg");
   background-repeat: no-repeat;
-  min-height: 300px;
+  min-height: 30%;
   position: absolute;
   left: 5%;
   top: 10%;
@@ -254,7 +269,7 @@ a {
 #contact {
   background-image: url("../images/contact-container.svg");
   background-repeat: no-repeat;
-  min-height: 300px;
+  min-height: 30%;
   position: absolute;
   right: 8%;
   top: 55%;
@@ -268,6 +283,7 @@ a {
   position: absolute;
   right: 7%;
   bottom: 2%;
+  display: none;
 }
 /* Extra */
 #extra {
@@ -283,31 +299,146 @@ a {
 /* -------------------       Button       --------------------- */
 
 /* ============================================================ *\
-*                         Media Queries                          *
-\* -----------------------------------------------------------  */
-
-/* ---------------       Hidden Elements       ---------------- */
-
-/*    Class slector to prioritize hidden on medium and down     */
-@media only screen and (max-width: 992px) {
-  span.hide-on-med-and-down {
-    display: none !important;
-  }
-}
-
-/* ============================================================ *\
 *                           Helpers                              *
 \* -----------------------------------------------------------  */
 
 .hidden {
   display: none !important;
 }
+
+.row {
+  margin-bottom: 0px !important;
+}
+
+/* ============================================================ *\
+*      Media Queries (Alphabetical by screen size break          *
+\* -----------------------------------------------------------  */
+
+/* ----------       Mobile Devices <= 600px S       ------------ */
+
+@media only screen and (max-width: 599px) {
+  #about-me h3 {
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 2.9%;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+  }
+
+  html {
+    height: auto;
+  }
+
+  p {
+    font-size: 0.75rem !important;
+  }
+
+  .scanlines {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #tab-container {
+    width: 90%;
+    margin: 0;
+  }
+
+  #technologies {
+    top: 40%;
+    left: 20%;
+  }
+
+  .textEffect {
+    /* same size as h1 */
+    font-size: 3rem;
+  }
+
+  .user-style-tab {
+    line-height: 150% !important;
+  }
+
+  #work {
+    top: 70%;
+  }
+
+  #work h3 {
+    margin-left: 50%;
+    margin-top: 14%;
+    color: var(--light-blue);
+  }
+
+  #about-me {
+    top: 3%;
+  }
+
+  #contact {
+    top: 110%;
+    right: 0%;
+  }
+
+  #resume {
+    top: 115%;
+  }
+
+  #resume-download-container {
+    position: absolute;
+    right: 15%;
+  }
+
+  #resume-download-icon {
+    position: absolute;
+    right: 40%;
+    top: 100%;
+  }
+
+  section#contact div#section-content {
+    position: absolute;
+    top: 31%;
+    left: 20%;
+  }
+
+  section#contact div#section-content h3 {
+    position: absolute;
+    margin: 0;
+    top: -20%;
+    left: -30%;
+    color: var(--light-blue);
+  }
+
+  #extra {
+    top: 100%;
+  }
+}
+
+.tabs {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* ----------       Tablet Devices > 600px M      ------------- */
+
+@media only screen and (max-width: 600px) {
+  .medium {
+  }
+}
+
+/* ----------       Desktop Devices > 992px L     ------------- */
+
+@media only screen and (max-width: 992px) {
+  .large {
+  }
+}
+
+/* ------       Large Desktop Devices > 1200px  XL      ------ */
+
+@media only screen and (max-width: 1200px) {
+  .xl {
+  }
+}
+
 /* ============================================================ *\
 *                        Example Heading                         *
 \* -----------------------------------------------------------  */
 
 /* -------------       Example Sub-Heading       --------------- */
-
-.row {
-  margin-bottom: 0px !important;
-}

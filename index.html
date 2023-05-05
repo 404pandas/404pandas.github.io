@@ -12,6 +12,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- User stylesheets -->
     <link rel="stylesheet" href="./assets/css/colors.css" />
@@ -24,7 +28,7 @@
     <div class="row" id="fix-margin-bottom">
       <aside class="col s5 offset-s6">
         <img
-          class="panda-coding right"
+          class="panda-coding responsive-img right"
           src="./assets/images/panda-coding.png"
           alt="Panda coding in front of a computer screen"
         />
@@ -41,7 +45,7 @@
       </aside>
       <div class="row">
         <!-- Technology section -->
-        <section id="technologies" class="col s5">
+        <section id="technologies" class="col s8">
           <!-- Column formatting -->
           <!-- section content -->
           <div id="section-content">
@@ -62,10 +66,10 @@
                   </li>
                 </ul>
               </div>
-              <div id="tech1" class="col s12">Test 1</div>
+              <!-- <div id="tech1" class="col s12">Test 1</div>
               <div id="tech2" class="col s12">Test 2</div>
               <div id="tech3" class="col s12">Test 3</div>
-              <div id="tech4" class="col s12">Test 4</div>
+              <div id="tech4" class="col s12">Test 4</div> -->
             </div>
             <ul>
               <li>
@@ -87,32 +91,19 @@
       </div>
       <div class="row">
         <!-- Work Section -->
-        <section id="work" class="col s5">
+        <section id="work" class="col s8">
           <!-- Column formatting -->
           <!-- section content -->
           <div id="section-content">
             <h3>Work</h3>
-            <ul>
-              <li>
-                <p>Example 1</p>
-              </li>
-              <li>
-                <p>Example 1</p>
-              </li>
-              <li>
-                <p>Example 1</p>
-              </li>
-              <li>
-                <p>Example 1</p>
-              </li>
-            </ul>
+            <!-- todo- swipeable carousel? -->
             <!-- End of column -->
           </div>
         </section>
       </div>
       <div class="row">
         <!-- About Me Section -->
-        <section id="about-me" class="col s5">
+        <section id="about-me" class="col s6">
           <!-- Column formatting -->
           <!-- section content -->
           <div id="section-content">
@@ -123,17 +114,23 @@
       </div>
       <div class="row">
         <!-- Contact Section -->
-        <section id="contact" class="col s2">
+        <section id="contact" class="col s5">
           <!-- Column formatting -->
-          <!-- section content -->
-          <div id="section-content">
+          <!-- contact header -->
+          <div id="resume-download-container">
             <h3>Contact</h3>
+            <i class="material-icons right" id="resume-download-icon"
+              >arrow_downward
+            </i>
+            <p>Resume</p>
+          </div>
+          <!-- contact content -->
+          <div id="section-content">
             <ul>
               <li><p>Icon + Email</p></li>
               <li><p>Icon + LinkedIn</p></li>
               <li><p>Icon + Github</p></li>
               <li><p>Icon + Twitch</p></li>
-              <li><p>Icon + Resume Download</p></li>
             </ul>
             <!-- TODO- contact form? -->
             <!-- End of column -->
@@ -143,7 +140,7 @@
       <!-- End of row -->
       <div class="row">
         <!-- Resume Section -->
-        <section id="resume" class="col s5">
+        <section id="resume" class="col s8">
           <!-- Column formatting -->
           <!-- section content -->
           <div id="section-content">
@@ -156,7 +153,7 @@
       </div>
       <div class="row">
         <!-- Extra Section -->
-        <section id="extra" class="col s2">
+        <section id="extra" class="col s5">
           <!-- Column formatting -->
           <!-- section content -->
           <div id="section-content">
