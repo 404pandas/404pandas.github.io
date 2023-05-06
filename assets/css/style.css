@@ -186,6 +186,68 @@ h3 {
 
 /* ------------------       Sections       -------------------- */
 
+/* Mind the Mess modal */
+
+#messy-panda {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  right: 7%;
+  top: 9px;
+}
+
+#modal-container {
+  display: flex;
+  justify-items: center;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.modal .modal-content {
+  padding: 0px !important;
+  position: relative;
+}
+
+.modal-content h5 {
+  position: relative;
+  width: 250px;
+  font-size: 1.3rem;
+  top: 9px;
+  right: 13px;
+}
+
+#modal-text {
+  position: relative;
+  width: 250px;
+  right: 13px;
+  bottom: -10px;
+  font-size: 0.8rem;
+}
+
+#modal1 {
+  background-image: url(../images/mind-the-mess-container.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  max-height: 300px;
+  min-height: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  position: absolute;
+  text-align: center;
+  padding: 0px !important;
+  overflow: hidden;
+}
+
+.modal-footer {
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+  background-color: transparent !important;
+}
+
 /*  Technologies */
 #technologies {
   background-image: url("../images/technology-container.svg");
