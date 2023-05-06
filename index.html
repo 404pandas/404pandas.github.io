@@ -26,7 +26,7 @@
     <div class="scanlines"></div>
     <!-- Start of body row -->
     <div class="row" id="fix-margin-bottom">
-      <aside class="col s5 offset-s6">
+      <aside class="col s5 offset-s6 flexbox">
         <img
           class="panda-coding right"
           src="./assets/images/panda-coding.png"
@@ -45,31 +45,40 @@
       </aside>
       <div class="row">
         <!-- Technology section -->
-        <section id="technologies" class="col s8">
+        <section id="technologies" class="col s8 flexbox">
           <!-- Column formatting -->
           <!-- section content -->
           <div id="section-content">
             <div class="row">
               <div class="col s8 offset-s4" id="column-container">
                 <ul class="tabs" id="tab-container">
-                  <li class="tab user-style-tab">
-                    <a href="#tech1">Frameworks & Technologies</a>
+                  <li class="tab user-style-tab" onclick="showTech1()">
+                    <a href="">Frameworks & Tech</a>
                   </li>
-                  <li class="tab user-style-tab">
-                    <a href="#tech2">Databases</a>
+                  <li class="tab user-style-tab" onclick="showTech2()">
+                    <a href="">Databases</a>
                   </li>
-                  <li class="tab user-style-tab">
-                    <a href="#tech3">Languages</a>
+                  <li class="tab user-style-tab" onclick="showTech3()">
+                    <a href="">Languages</a>
                   </li>
-                  <li class="tab user-style-tab">
-                    <a href="#tech4">Other Tools</a>
+                  <li class="tab user-style-tab" onclick="showTech4()">
+                    <a href="">Other Tools</a>
                   </li>
                 </ul>
               </div>
-              <!-- <div id="tech1" class="col s12">Test 1</div>
-              <div id="tech2" class="col s12">Test 2</div>
-              <div id="tech3" class="col s12">Test 3</div>
-              <div id="tech4" class="col s12">Test 4</div> -->
+              <div id="tech1" class="col s12">
+                <h4>Frameworks & Tech</h4>
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div id="tech2" class="col s12 hidden">Test 2</div>
+              <div id="tech3" class="col s12 hidden">Test 3</div>
+              <div id="tech4" class="col s12 hidden">Test 4</div>
             </div>
             <ul>
               <li>
@@ -91,7 +100,7 @@
       </div>
       <div class="row">
         <!-- Work Section -->
-        <section id="work" class="col s8">
+        <section id="work" class="col s8 flexbox">
           <!-- Column formatting -->
           <!-- section content -->
           <div id="section-content">
@@ -103,7 +112,7 @@
       </div>
       <div class="row">
         <!-- About Me Section -->
-        <section id="about-me" class="col s6">
+        <section id="about-me" class="col s6 flexbox">
           <!-- Column formatting -->
           <!-- section content -->
           <div id="section-content">
@@ -114,7 +123,7 @@
       </div>
       <div class="row">
         <!-- Contact Section -->
-        <section id="contact" class="col s5">
+        <section id="contact" class="col s5 flexbox">
           <!-- Column formatting -->
           <!-- contact header -->
           <div id="resume-download-container">
@@ -140,7 +149,7 @@
       <!-- End of row -->
       <div class="row">
         <!-- Resume Section -->
-        <section id="resume" class="col s8">
+        <section id="resume" class="col s8 flexbox">
           <!-- Column formatting -->
           <!-- section content -->
           <div id="section-content">
@@ -153,7 +162,7 @@
       </div>
       <div class="row">
         <!-- Extra Section -->
-        <section id="extra" class="col s5">
+        <section id="extra" class="col s5 flexbox">
           <!-- Column formatting -->
           <!-- section content -->
           <div id="section-content">
@@ -169,7 +178,7 @@
       </div>
     </div>
     <!-- Modal -->
-    <div id="modal-container flexbox">
+    <!-- <div id="modal-container flexbox">
       <div id="modal1" class="modal flexbox">
         <div class="modal-content">
           <h5>Mind the Mess</h5>
@@ -185,7 +194,7 @@
           >
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- script link -->
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/onload.js"></script>

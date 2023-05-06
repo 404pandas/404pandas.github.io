@@ -167,6 +167,12 @@ h3 {
   color: var(--black);
 }
 
+h4 {
+  font-size: 0.9rem !important;
+  color: var(--black);
+  font-weight: 500;
+}
+
 /* ============================================================ *\
 *                          Components                            *
 \* -----------------------------------------------------------  */
@@ -176,9 +182,9 @@ h3 {
 /*        Coding Panda        */
 .panda-coding {
   position: absolute;
-  top: 5%;
-  right: 5%;
-  width: 10%;
+  width: 200px;
+  top: 30px;
+  right: 30px;
 }
 
 /*  Name */
@@ -252,16 +258,20 @@ h3 {
 #technologies {
   background-image: url("../images/technology-container.svg");
   background-repeat: repeat-y;
-  min-height: 30%;
+  min-height: 180px;
+  max-height: 180px;
   position: absolute;
   top: 13%;
-  left: 30%;
+  right: 3%;
 }
 
 /* ~~~~~~ Column container (sets height to contain ul) ~~~~~ */
 #column-container {
-  height: fit-content;
-  margin-top: 4%;
+  position: relative;
+  height: 20px;
+  width: 215px;
+  top: 16px;
+  right: -33px;
 }
 
 /* ~~~~~~ Tab container ~~~~~~ */
@@ -270,15 +280,25 @@ h3 {
   flex-direction: column !important;
   overflow-x: visible;
   overflow-y: visible;
-  height: 70%;
+  background: transparent;
+  height: 20px;
 }
 
 /* ~~~~~~ Fixes line height for the line items ~~~~~~ */
 .user-style-tab {
-  height: 30% !important;
-  line-height: 30% !important;
-  background: rgba(0, 0, 0, 0.1);
+  height: 20px !important;
+  line-height: 20px !important;
+  background: rgba(255, 255, 255, 0.1);
   margin: 1%;
+  border: 0.1px solid var(--light-blue);
+}
+
+.user-style-tab a {
+  text-transform: capitalize;
+}
+
+.user-style-tab:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 /* Frameworks and Technologies */
@@ -286,24 +306,42 @@ h3 {
   background-image: url("../images/technology-modal.svg");
   background-repeat: no-repeat;
   position: absolute;
+  min-height: 180px;
+  max-height: 180px;
+  left: -200px;
+  bottom: -55px;
+  z-index: 10;
 }
+
+#tech1 h4 {
+  position: relative;
+  left: 10px;
+  top: -3px;
+}
+
 /* Databases */
 #tech2 {
   background-image: url("../images/technology-modal-2.svg");
   background-repeat: no-repeat;
   position: absolute;
+  min-height: 180px;
+  max-height: 180px;
 }
 /* Languages */
 #tech3 {
   background-image: url("../images/technology-modal-3.svg");
   background-repeat: no-repeat;
   position: absolute;
+  min-height: 180px;
+  max-height: 180px;
 }
 /* Other Tools */
 #tech4 {
   background-image: url("../images/technology-modal-4.svg");
   background-repeat: no-repeat;
   position: absolute;
+  min-height: 180px;
+  max-height: 180px;
 }
 
 /* Work */
@@ -311,7 +349,7 @@ h3 {
   background-image: url("../images/work-container.svg");
   background-repeat: no-repeat;
   min-height: 30%;
-  position: absolute;
+  position: relative;
   left: 28%;
   top: 50%;
 }
