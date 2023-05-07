@@ -1,4 +1,4 @@
-// Scroll event listener
+// TODO- Scroll event listener for future development
 window.addEventListener(
   "scroll",
   () => {
@@ -10,11 +10,6 @@ window.addEventListener(
   false
 );
 
-// Tab Javascript
-let elem = document.querySelector(".tabs");
-let options = { swipeable: true };
-var instance = M.Tabs.init(el, options);
-var instance = M.Tabs.getInstance(elem);
 // On-click display for technologies
 // function showTech1() {
 //   let tech1 = document.getElementById("tech1");
@@ -40,3 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var instance = M.Modal.init(Modalelem);
   instance.open();
 });
+
+// Tab Javascript
+let elem = document.querySelector(".tabs");
+let options = { swipeable: true };
+var instance = M.Tabs.init(el, options);
+var instance = M.Tabs.getInstance(elem);
