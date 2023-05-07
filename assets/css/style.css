@@ -201,15 +201,7 @@ h4 {
   border-radius: 30px;
   right: 7%;
   top: 9px;
-}
-
-#modal-container {
-  display: flex;
-  justify-items: center;
-  align-self: center;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  z-index: 100;
 }
 
 .modal .modal-content {
@@ -242,6 +234,8 @@ h4 {
   min-width: 300px;
   max-width: 300px;
   position: absolute;
+  margin-left: 5%;
+  margin-right: 95%;
   text-align: center;
   padding: 0px !important;
   overflow: hidden;
@@ -272,6 +266,7 @@ h4 {
   width: 215px;
   top: 16px;
   right: -33px;
+  z-index: 500;
 }
 
 /* ~~~~~~ Tab container ~~~~~~ */
@@ -281,7 +276,8 @@ h4 {
   overflow-x: visible;
   overflow-y: visible;
   background: transparent;
-  height: 20px;
+  /* modal= 1003 */
+  z-index: 1500;
 }
 
 /* ~~~~~~ Fixes line height for the line items ~~~~~~ */
@@ -291,6 +287,7 @@ h4 {
   background: rgba(255, 255, 255, 0.1);
   margin: 1%;
   border: 0.1px solid var(--light-blue);
+  z-index: 600;
 }
 
 .user-style-tab a {
@@ -310,7 +307,7 @@ h4 {
   max-height: 180px;
   left: -200px;
   bottom: -55px;
-  z-index: 10;
+  z-index: 200;
 }
 
 #tech1 h4 {
