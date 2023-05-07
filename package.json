@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/404pandas/404pandas.github.io/issues"
   },
-  "homepage": "https://github.com/404pandas/404pandas.github.io#readme"
+  "homepage": "https://github.com/404pandas/404pandas.github.io#readme",
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
+  }
 }

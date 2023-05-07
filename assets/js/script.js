@@ -11,8 +11,10 @@ window.addEventListener(
 );
 
 // Tab Javascript
+let elem = document.querySelector(".tabs");
+let options = { swipeable: true };
 var instance = M.Tabs.init(el, options);
-
+var instance = M.Tabs.getInstance(elem);
 // On-click display for technologies
 // function showTech1() {
 //   let tech1 = document.getElementById("tech1");
@@ -31,3 +33,10 @@ var instance = M.Tabs.init(el, options);
 //   let tech4 = document.getElementById("tech4");
 //   tech4.classList.remove("hidden");
 // }
+
+// Messy Panda javascript
+document.addEventListener("DOMContentLoaded", function () {
+  var Modalelem = document.querySelector(".modal");
+  var instance = M.Modal.init(Modalelem);
+  instance.open();
+});
