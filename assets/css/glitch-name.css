@@ -1,15 +1,18 @@
 .textEffect-container {
   position: absolute;
-  right: 8%;
+  right: 20px;
   top: 28%;
 }
 
 .textEffect {
   color: #fafbfbff;
   position: relative;
-  bottom: 5%;
-  right: 5%;
+  white-space: nowrap;
+  letter-spacing: 0.15rem;
+  bottom: -80px;
+  right: 100px;
   font-size: 4vw;
+  width: 300px;
   animation: textEffect 10s 10s infinite;
 }
 
@@ -18,7 +21,6 @@
   position: absolute;
   left: -2px;
   text-shadow: -5px 0 #000000ff;
-
   overflow: hidden;
   top: 0;
   animation: noise-1 5s linear infinite alternate-reverse,
@@ -28,6 +30,7 @@
 .textEffect::after {
   content: attr(data-text);
   position: absolute;
+  white-space: nowrap;
   left: 2px;
   text-shadow: -5px 0 #8cd5cf;
   top: 0;

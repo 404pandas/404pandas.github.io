@@ -193,8 +193,8 @@
         <!-- Contact Section -->
         <section id="contact" class="col s5 flexbox">
           <!-- contact header -->
+          <h3>Contact</h3>
           <div id="resume-download-container">
-            <h3>Contact</h3>
             <i class="material-icons" id="resume-download-icon"
               >arrow_downward
             </i>
@@ -202,12 +202,84 @@
           </div>
           <!-- contact content -->
           <div id="section-content">
-            <ul>
-              <li><p>Icon + Email</p></li>
-              <li><p>Icon + LinkedIn</p></li>
-              <li><p>Icon + Github</p></li>
-              <li><p>Icon + Twitch</p></li>
+            <ul id="contact-ul">
+              <li>
+                <a href="tel:7728342342">
+                  <p>
+                    <i class="material-icons tiny left">local_phone </i>Phone
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="mailto: mary.panda.jackson@gmail.com">
+                  <p><i class="material-icons tiny left">email</i>Email</p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p>
+                    <i class="material-icons tiny left">assignment </i>LinkedIn
+                  </p></a
+                >
+              </li>
+              <li>
+                <a href="">
+                  <p><i class="material-icons tiny left">code</i>Github</p>
+                </a>
+              </li>
             </ul>
+            <div id="contact-form-trigger" class="btn modal-trigger">
+              <a href="#contact-form">
+                <p>
+                  <i class="material-icons tiny left">open_in_new</i>Open
+                  Contact Form
+                </p></a
+              >
+            </div>
+            <div id="contact-form" class="modal">
+              <div class="modal-content">
+                <h4>Contact Me</h4>
+                <img
+                  src="images/title.gif"
+                  alt="A Nice &amp; Simple Contact Form"
+                /><br /><br />
+
+                <div id="contact-area">
+                  <form method="post" action="contactengine.php">
+                    <label for="Name">Name:</label>
+                    <input type="text" name="Name" id="Name" />
+
+                    <label for="Email">Email:</label>
+                    <input type="text" name="Email" id="Email" />
+
+                    <label for="Message">Message:</label><br />
+                    <textarea
+                      name="Message"
+                      rows="20"
+                      cols="20"
+                      id="Message"
+                    ></textarea>
+
+                    <input
+                      type="submit"
+                      name="submit"
+                      value="Submit"
+                      class="submit-button"
+                    />
+                  </form>
+
+                  <div style="clear: both"></div>
+                </div>
+                <p>
+                  Base code for contact form by
+                  <a href="http://css-tricks.com">Chris Coyier at CSS-Tricks</a>
+                </p>
+                <p>Additional styling provided by myself</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close btn-flat">Agree</a>
+              </div>
+            </div>
             <!-- TODO- contact form? -->
           </div>
           <!-- End of contact section -->

@@ -190,9 +190,9 @@ h4 {
 /*        Coding Panda        */
 .panda-coding {
   position: absolute;
-  width: 200px;
-  top: 30px;
-  right: 30px;
+  width: 300px;
+  top: 40px;
+  right: 100px;
 }
 
 /*  Name */
@@ -467,6 +467,7 @@ h4 {
 /* About Me */
 #about-me {
   background-image: url("../images/about-me-container.svg");
+  background-repeat: no-repeat;
   min-height: 300px;
   max-height: 300px;
   position: absolute;
@@ -522,11 +523,48 @@ h4 {
 #contact {
   background-image: url("../images/contact-container.svg");
   background-repeat: no-repeat;
-  min-height: 30%;
+  min-height: 300px;
   position: absolute;
-  right: 8%;
+  right: -150px;
   top: 55%;
 }
+
+#contact h3 {
+  position: absolute;
+  top: -27px;
+  left: 70px;
+}
+
+#contact ul {
+  position: absolute;
+  white-space: normal;
+  width: 200px;
+  height: 80px;
+  top: 105px;
+  left: 80px;
+  font-size: 0.8rem;
+  -webkit-column-count: 2; /* Chrome/Opera, Safari */
+  -moz-column-count: 2; /* Mozilla Firefox */
+  column-count: 2;
+}
+
+#contact i {
+  vertical-align: middle;
+}
+
+#contact li {
+  vertical-align: middle;
+  line-height: 25px;
+}
+
+#resume-download-container {
+  position: absolute;
+  top: 32px;
+  left: 200px;
+  text-align: center;
+  line-height: 15px;
+}
+
 /* Resume */
 #resume {
   background-image: url("../images/resume-container.svg");
@@ -536,7 +574,7 @@ h4 {
   position: absolute;
   right: 7%;
   bottom: 2%;
-  display: none;
+  display: none !important;
 }
 /* Extra */
 #extra {
