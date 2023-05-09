@@ -93,7 +93,7 @@ body {
   background-size: cover;
   margin: 0;
   width: 100vw;
-  /* height: 100vh; */
+  height: 200vh;
   aspect-ratio: auto;
 }
 
@@ -177,6 +177,14 @@ h4 {
 *                          Components                            *
 \* -----------------------------------------------------------  */
 
+/* Scanlines */
+.scanlines {
+  height: 200vh;
+  width: 100vw;
+  background-repeat: repeat;
+  overflow: visible !important;
+}
+
 /* -------------------       Header       --------------------- */
 
 /*        Coding Panda        */
@@ -249,6 +257,10 @@ h4 {
 }
 
 /*  Technologies */
+#technology-row {
+  width: 900px;
+}
+
 #technologies {
   background-image: url("../images/technology-container.svg");
   background-repeat: repeat-y;
@@ -259,6 +271,13 @@ h4 {
   right: 3%;
 }
 
+.carousel-item {
+  opacity: 0.01 !important;
+}
+.carousel-item.active {
+  opacity: 1 !important;
+}
+
 /* ~~~~~~ Column container (sets height to contain ul) ~~~~~ */
 #column-container {
   position: relative;
@@ -266,7 +285,10 @@ h4 {
   width: 215px;
   top: 16px;
   right: -33px;
-  z-index: 500;
+}
+
+.indicator {
+  display: none;
 }
 
 /* ~~~~~~ Tab container ~~~~~~ */
@@ -277,7 +299,10 @@ h4 {
   overflow-y: visible;
   background: transparent;
   /* modal= 1003 */
-  z-index: 1500;
+  z-index: 1600;
+  position: absolute;
+  left: 1px;
+  width: 190px;
 }
 
 /* ~~~~~~ Fixes line height for the line items ~~~~~~ */
@@ -287,7 +312,7 @@ h4 {
   background: rgba(255, 255, 255, 0.1);
   margin: 1%;
   border: 0.1px solid var(--light-blue);
-  z-index: 600;
+  z-index: 1700;
 }
 
 .user-style-tab a {
@@ -298,22 +323,35 @@ h4 {
   background: rgba(0, 0, 0, 0.1);
 }
 
+.tabs-content {
+  overflow: visible;
+}
+
 /* Frameworks and Technologies */
 #tech1 {
   background-image: url("../images/technology-modal.svg");
   background-repeat: no-repeat;
   position: absolute;
-  min-height: 180px;
-  max-height: 180px;
-  left: -200px;
-  bottom: -55px;
-  z-index: 200;
+  min-height: 180px !important;
+  max-height: 180px !important;
+  left: -190px;
+  top: 80px;
+  z-index: 1800;
 }
 
 #tech1 h4 {
   position: relative;
-  left: 10px;
-  top: -3px;
+  top: -7px;
+  left: 16px;
+}
+
+#tech1 ul {
+  position: absolute;
+  left: 25px;
+  height: 80px;
+  width: 125px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 /* Databases */
@@ -321,24 +359,99 @@ h4 {
   background-image: url("../images/technology-modal-2.svg");
   background-repeat: no-repeat;
   position: absolute;
+  top: -65px;
+  left: -190px;
   min-height: 180px;
   max-height: 180px;
 }
+
+#tech2 h4 {
+  position: absolute;
+  top: -15px;
+  left: 25px;
+}
+
+#tech2 ul {
+  position: absolute;
+  left: 50px;
+  top: 34px;
+  height: 80px;
+  width: 110px;
+  overflow: hidden;
+}
+
+#tech2 i {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
 /* Languages */
 #tech3 {
   background-image: url("../images/technology-modal-3.svg");
   background-repeat: no-repeat;
   position: absolute;
+  top: 84px;
+  left: -192px;
   min-height: 180px;
   max-height: 180px;
 }
+
+#tech3 h4 {
+  position: absolute;
+  top: 11px;
+  left: 35px;
+  color: var(--light-blue);
+}
+
+#tech3 ul {
+  position: absolute;
+  left: 50px;
+  top: 62px;
+  height: 48px;
+  width: 120px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#tech3 i {
+  position: absolute;
+  right: 28px;
+  top: 23px;
+}
+
 /* Other Tools */
 #tech4 {
   background-image: url("../images/technology-modal-4.svg");
   background-repeat: no-repeat;
   position: absolute;
+  left: -193px;
+  top: -30px;
   min-height: 180px;
   max-height: 180px;
+  visibility: visible;
+}
+
+#tech4 h4 {
+  position: absolute;
+  top: -17px;
+  right: 42px;
+}
+
+#tech4 ul {
+  position: absolute;
+  left: 26px;
+  top: 22px;
+  height: 63px;
+  width: 125px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#tech4 i {
+  position: absolute;
+  top: 20px;
+  right: 47px;
 }
 
 /* Work */
@@ -347,18 +460,62 @@ h4 {
   background-repeat: no-repeat;
   min-height: 30%;
   position: relative;
-  left: 28%;
-  top: 50%;
+  left: 28px;
+  top: 50px;
 }
 
 /* About Me */
 #about-me {
   background-image: url("../images/about-me-container.svg");
-  background-repeat: no-repeat;
-  min-height: 30%;
+  min-height: 300px;
+  max-height: 300px;
   position: absolute;
-  left: 5%;
-  top: 10%;
+  left: 80px;
+  top: 400px;
+  z-index: 0 !important;
+}
+
+#about-me h3 {
+  position: absolute;
+  top: -13px;
+  left: 60px;
+}
+
+#about-me img {
+  background-image: url("../images/MaryEleniusProfilePic.jpeg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 34px;
+  top: 60px;
+  height: 50px;
+  width: 50px;
+}
+
+#about-me ul {
+  position: absolute;
+  top: 58px;
+  left: 100px;
+  height: 50px;
+  font-size: 0.6rem;
+}
+
+#top-list {
+  margin: 2px;
+}
+
+#bottom-list {
+  margin: 2px;
+}
+
+#section-content div#about-p-tags {
+  position: absolute;
+  left: 30px;
+  top: 140px;
+  width: 140px;
+  height: 120px;
+  overflow: hidden;
+  overflow-y: scroll;
+  font-size: 0.8rem;
 }
 
 /* Contact */
@@ -477,6 +634,7 @@ h4 {
   .scanlines {
     height: 100vh;
     width: 100vw;
+    background-repeat: repeat-y;
   }
 
   section#contact div#section-content {
