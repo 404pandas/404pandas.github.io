@@ -238,14 +238,14 @@
 .scanlines {
   overflow: visible;
   mix-blend-mode: difference;
-  height: 200vh;
+  height: 100vh;
 }
 
 .scanlines::before {
   content: "";
   position: absolute;
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   top: 0;
   left: 0;
 

@@ -93,7 +93,7 @@ body {
   background-size: cover;
   margin: 0;
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   aspect-ratio: auto;
 }
 
@@ -183,7 +183,7 @@ h5 {
 
 /* Scanlines */
 .scanlines {
-  height: 200vh;
+  height: 100vh;
   width: 100vw;
   background-repeat: repeat;
   overflow: visible !important;
@@ -261,18 +261,16 @@ h5 {
 }
 
 /*  Technologies */
-#technology-row {
-  width: 900px;
-}
 
 #technologies {
   background-image: url("../images/technology-container.svg");
-  background-repeat: repeat-y;
-  min-height: 180px;
-  max-height: 180px;
+  background-repeat: no-repeat;
+  min-width: 400px !important;
+  max-width: 400px !important;
+  height: 190px;
   position: absolute;
-  top: 13%;
-  right: 3%;
+  top: 100px;
+  left: 400px;
 }
 
 .carousel-item {
@@ -282,13 +280,18 @@ h5 {
   opacity: 1 !important;
 }
 
+#technology-content {
+  height: 0px;
+  width: 0px;
+}
+
 /* ~~~~~~ Column container (sets height to contain ul) ~~~~~ */
 #column-container {
   position: relative;
   height: 20px;
   width: 215px;
   top: 16px;
-  right: -33px;
+  right: -30px;
 }
 
 .indicator {
@@ -304,8 +307,15 @@ h5 {
   background: transparent;
   /* modal= 1003 */
   position: absolute;
-  left: 1px;
+  left: 100px;
+  top: 5px;
   width: 190px;
+}
+
+.tabs-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 /* ~~~~~~ Fixes line height for the line items ~~~~~~ */
@@ -315,6 +325,7 @@ h5 {
   background: rgba(255, 255, 255, 0.1);
   margin: 1%;
   border: 0.1px solid var(--light-blue);
+  z-index: 5000;
 }
 
 .user-style-tab a {
@@ -338,6 +349,24 @@ h5 {
   max-height: 180px !important;
   left: -190px;
   top: 80px;
+  width: 200px;
+}
+
+.carousel-slider {
+  width: 10px;
+}
+
+.carousel-item {
+  z-index: -10 !important;
+}
+
+.carousel-item.active {
+  z-index: 1600 !important;
+}
+
+#technology-z-index {
+  z-index: -20 !important;
+  width: 1px;
 }
 
 #tech1 h4 {
@@ -353,6 +382,7 @@ h5 {
   width: 125px;
   overflow: hidden;
   overflow-y: scroll;
+  z-index: 3000;
 }
 
 /* Databases */
@@ -364,6 +394,8 @@ h5 {
   left: -190px;
   min-height: 180px;
   max-height: 180px;
+  z-index: 1500;
+  width: 200px;
 }
 
 #tech2 h4 {
@@ -396,6 +428,7 @@ h5 {
   left: -192px;
   min-height: 180px;
   max-height: 180px;
+  width: 200px;
 }
 
 #tech3 h4 {
@@ -431,6 +464,7 @@ h5 {
   min-height: 180px;
   max-height: 180px;
   visibility: visible;
+  width: 220px;
 }
 
 #tech4 h4 {
@@ -461,6 +495,7 @@ h5 {
   background-repeat: no-repeat;
   min-height: 300px;
   max-height: 300px;
+  width: 320px;
   position: absolute;
   left: 80px;
   top: 400px;
@@ -515,9 +550,11 @@ h5 {
   background-image: url("../images/contact-container.svg");
   background-repeat: no-repeat;
   min-height: 300px;
+  max-height: 300px;
   position: absolute;
-  right: -100px;
-  top: 55%;
+  width: 400px;
+  right: 10px;
+  top: 400px;
 }
 
 #contact h3 {
@@ -657,9 +694,10 @@ label {
   background-repeat: no-repeat;
   min-height: 250px !important;
   max-height: 250px !important;
+  width: 400px;
   position: absolute !important;
-  right: 70px;
-  top: 350px;
+  left: 500px;
+  top: 450px;
 }
 
 #work h3 {
@@ -670,7 +708,7 @@ label {
 
 #work-ul {
   position: absolute;
-  left: 200px;
+  left: 170px;
   top: 60px;
   height: 30px;
   width: 110px;
@@ -688,8 +726,8 @@ label {
 #work4,
 #work5 {
   position: absolute;
-  top: 120px;
-  right: 620px;
+  top: 100px;
+  right: 90px;
 }
 
 .specific-work-ul {
@@ -840,9 +878,13 @@ label {
   }
 
   .scanlines {
-    height: 100vh;
+    height: 100vh !important;
     width: 100vw;
     background-repeat: repeat-y;
+  }
+
+  .scanlines::before {
+    height: 100vh !important;
   }
 
   section#contact div#section-content {

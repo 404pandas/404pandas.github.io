@@ -49,10 +49,10 @@
       <!-- End of aside -->
       <div id="technology-row" class="row">
         <!-- Technology section -->
-        <section id="technologies" class="col s8 flexbox">
+        <section id="technologies" class="flexbox">
           <!-- Technology content -->
-          <div id="section-content">
-            <div class="col s8 offset-s4" id="column-container">
+          <div id="section-content" id="technology-z-index">
+            <div id="column-container">
               <!-- Tabs -->
               <ul class="tabs" id="tab-container">
                 <li class="tab user-style-tab">
@@ -71,7 +71,7 @@
               <!-- End of tabs -->
             </div>
             <!-- Frameworks and Technologies -->
-            <div id="tech1" class="col s12 tech1">
+            <div id="tech1" class="tech1">
               <h4>Frameworks</h4>
               <ul id="frameworks">
                 <li><p>Node.js</p></li>
@@ -82,7 +82,7 @@
               </ul>
             </div>
             <!-- Databases -->
-            <div id="tech2" class="col s12 tech2">
+            <div id="tech2" class="tech2">
               <h4>Databases</h4>
               <ul>
                 <li><p>MySQL</p></li>
@@ -91,7 +91,7 @@
               </ul>
             </div>
             <!-- Languages -->
-            <div id="tech3" class="col s12 tech3">
+            <div id="tech3" class="tech3">
               <h4>Languages</h4>
               <ul>
                 <li><p>CSS3</p></li>
@@ -104,7 +104,7 @@
               </ul>
             </div>
             <!-- Other Tools -->
-            <div id="tech4" class="col s12 tech4">
+            <div id="tech4" class="tech4">
               <h4>Other Tools</h4>
               <ul>
                 <li><p>npm</p></li>
@@ -143,10 +143,9 @@
       </div>
       <div class="work-row">
         <!-- Work Section -->
-        <section id="work" class="col s8 flexbox">
+        <section id="work" class="flexbox">
           <!-- section content -->
           <div id="section-content">
-            <h3>Work</h3>
             <ul id="work-ul">
               <li>
                 <a href="#work1">Work 1</a>
@@ -228,7 +227,7 @@
       </div>
       <div id="about-me-row">
         <!-- About Me Section -->
-        <section id="about-me" class="col s6 flexbox">
+        <section id="about-me" class="flexbox">
           <!-- section content -->
           <div id="section-content">
             <h3>About Me</h3>
@@ -265,14 +264,20 @@
       </div>
       <div class="contact-row">
         <!-- Contact Section -->
-        <section id="contact" class="col s5 flexbox">
+        <section id="contact" class="flexbox">
           <!-- contact header -->
           <h3>Contact</h3>
           <div id="resume-download-container">
-            <i class="material-icons" id="resume-download-icon"
-              >arrow_downward
-            </i>
-            <p>Resume</p>
+            <a
+              href="./assets/MaryEleniusDevResume.pdf"
+              attributes-list
+              download="MaryEleniusResume"
+            >
+              <i class="material-icons" id="resume-download-icon"
+                >arrow_downward
+              </i>
+              <p>Resume</p></a
+            >
           </div>
           <!-- contact content -->
           <div id="section-content">
@@ -365,7 +370,7 @@
       <!-- End of row -->
       <div class="resume-row">
         <!-- Resume Section -->
-        <section id="resume" class="col s8 flexbox">
+        <section id="resume" class="flexbox">
           <!-- section content -->
           <div id="section-content">
             <h3>resume</h3>
