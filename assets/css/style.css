@@ -173,6 +173,10 @@ h4 {
   font-weight: 500;
 }
 
+h5 {
+  font-size: 0.7rem !important;
+}
+
 /* ============================================================ *\
 *                          Components                            *
 \* -----------------------------------------------------------  */
@@ -299,7 +303,6 @@ h4 {
   overflow-y: visible;
   background: transparent;
   /* modal= 1003 */
-  z-index: 1600;
   position: absolute;
   left: 1px;
   width: 190px;
@@ -312,7 +315,6 @@ h4 {
   background: rgba(255, 255, 255, 0.1);
   margin: 1%;
   border: 0.1px solid var(--light-blue);
-  z-index: 1700;
 }
 
 .user-style-tab a {
@@ -336,7 +338,6 @@ h4 {
   max-height: 180px !important;
   left: -190px;
   top: 80px;
-  z-index: 1800;
 }
 
 #tech1 h4 {
@@ -454,16 +455,6 @@ h4 {
   right: 47px;
 }
 
-/* Work */
-#work {
-  background-image: url("../images/work-container.svg");
-  background-repeat: no-repeat;
-  min-height: 30%;
-  position: relative;
-  left: 28px;
-  top: 50px;
-}
-
 /* About Me */
 #about-me {
   background-image: url("../images/about-me-container.svg");
@@ -525,7 +516,7 @@ h4 {
   background-repeat: no-repeat;
   min-height: 300px;
   position: absolute;
-  right: -150px;
+  right: -100px;
   top: 55%;
 }
 
@@ -549,6 +540,7 @@ h4 {
 }
 
 #contact i {
+  height: 25px;
   vertical-align: middle;
 }
 
@@ -557,12 +549,86 @@ h4 {
   line-height: 25px;
 }
 
-#resume-download-container {
-  position: absolute;
-  top: 32px;
-  left: 200px;
+/* ~~~ Contact Form Modal ~~~~ */
+
+#contact-form-trigger {
+  height: 30px;
+  width: 200px;
+  position: absolute !important;
+  bottom: 106px;
+  left: 75px;
+  font-size: 0.7rem;
+  vertical-align: middle;
+}
+
+#modal2 {
+  background-color: #121629;
+  border: 1px solid var(--light-blue);
+  border-radius: 5px;
+}
+
+.modal-content h2 {
+  margin: 10px;
+}
+
+#contact-area {
+  width: 600px;
+  margin-top: 0px;
+  padding: 20px;
+  padding-top: 0px;
+  z-index: 1900;
+}
+
+.modal-content p {
   text-align: center;
-  line-height: 15px;
+  margin-bottom: 20px;
+}
+
+#contact-area input,
+#contact-area textarea {
+  padding: 5px;
+  width: 471px;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.4em;
+  margin: 0px 0px 10px 0px;
+  border: 1px solid var(--light-blue);
+  z-index: 1900;
+  color: var(--light-blue);
+}
+
+#contact-area textarea {
+  height: 90px;
+  z-index: 1900;
+}
+
+#contact-area textarea:focus,
+#contact-area input:focus {
+  border: 1px solid var(--white);
+  z-index: 1900;
+}
+
+#contact-area input.submit-button {
+  width: 100px;
+  z-index: 1900;
+  background-color: #121629;
+  color: var(--light-blue);
+}
+
+label {
+  float: left;
+  text-align: left;
+  margin-right: 15px;
+  margin-left: 5px;
+  width: 100px;
+  padding-top: 5px;
+  font-size: 1.4em;
+  z-index: 1900;
+  color: var(--light-blue);
+}
+
+#modal-p {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* Resume */
@@ -576,6 +642,109 @@ h4 {
   bottom: 2%;
   display: none !important;
 }
+
+#resume-download-container {
+  position: absolute;
+  top: 32px;
+  left: 200px;
+  text-align: center;
+  line-height: 15px;
+}
+
+/* Work */
+#work {
+  background-image: url("../images/work-container.svg");
+  background-repeat: no-repeat;
+  min-height: 250px !important;
+  max-height: 250px !important;
+  position: absolute !important;
+  right: 70px;
+  top: 350px;
+}
+
+#work h3 {
+  margin-left: 50%;
+  margin-top: 14%;
+  color: var(--light-blue);
+}
+
+#work-ul {
+  position: absolute;
+  left: 200px;
+  top: 60px;
+  height: 30px;
+  width: 110px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#work li {
+  line-height: 20px;
+}
+
+#work1,
+#work2,
+#work3,
+#work4,
+#work5 {
+  position: absolute;
+  top: 120px;
+  right: 620px;
+}
+
+.specific-work-ul {
+  columns: 4;
+  font-size: 0.6rem;
+}
+
+#work1 span,
+#work2 span,
+#work3 span,
+#work4 span,
+#work5 span {
+  line-height: 16px;
+  font-size: 0.6rem;
+}
+
+#work1 li,
+#work2 li,
+#work3 li,
+#work4 li,
+#work5 li {
+  line-height: 16px;
+}
+
+#work1 h4,
+#work2 h4,
+#work3 h4,
+#work4 h4,
+#work5 h4 {
+  line-height: 16px !important;
+  margin: 5px;
+  color: var(--light-blue);
+}
+
+#work1 h5,
+#work2 h5,
+#work3 h5,
+#work4 h5,
+#work5 h5 {
+  line-height: 16px !important;
+  margin: 5px;
+}
+
+.work-links {
+  justify-content: space-around;
+}
+
+.workInactive {
+  display: none !important;
+}
+
+.workActive {
+  display: inline !important;
+}
+
 /* Extra */
 #extra {
   background-image: url("../images/extra-container.svg");
@@ -585,6 +754,7 @@ h4 {
   left: 8%;
   bottom: 5%;
 }
+
 /* -------------------       Footer       --------------------- */
 
 /* -------------------       Button       --------------------- */
@@ -713,7 +883,10 @@ h4 {
   }
 
   #work {
-    top: 70%;
+    min-height: 300px !important;
+    position: absolute !important;
+    right: -100px;
+    top: 55%;
   }
 
   #work h3 {

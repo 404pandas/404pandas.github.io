@@ -1,14 +1,27 @@
+// Contact form javascript
+document.addEventListener("DOMContentLoaded", function (e) {
+  var elems = document.querySelector("#modal2");
+  var instance = M.Modal.init(elems);
+});
+
+// Messy Panda javascript
+document.addEventListener("DOMContentLoaded", function (e) {
+  var elems = document.querySelector("#modal1");
+  var instance = M.Modal.init(elems);
+  instance.open();
+});
+
 // TODO- Scroll event listener for future development
-window.addEventListener(
-  "scroll",
-  () => {
-    document.body.style.setProperty(
-      "--scroll",
-      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-    );
-  },
-  false
-);
+// window.addEventListener(
+//   "scroll",
+//   () => {
+//     document.body.style.setProperty(
+//       "--scroll",
+//       window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+//     );
+//   },
+//   false
+// );
 
 // Close button javascript
 window.onload = function () {
@@ -17,14 +30,6 @@ window.onload = function () {
     return false;
   };
 };
-
-// Messy Panda javascript
-document.addEventListener("DOMContentLoaded", function (e) {
-  e.preventDefault();
-  var Modalelem = document.querySelector(".modal");
-  var instance = M.Modal.init(Modalelem);
-  instance.open();
-});
 
 // Tab Javascript
 let el = document.querySelector(".tabs");
@@ -38,4 +43,16 @@ function showTech1() {
   console.log(tech1Container);
   tech1Container.classList.remove("hidden");
   console.log(tech1Container);
+}
+
+// Work if/else render
+const allWork = document.querySelectorAll(".workInactive");
+
+allWork.forEach((work) => work.addEventListener("click", toggleActiveWork));
+
+function toggleActiveWork(e) {
+  works.forEach((work) => {
+    work.classList.remove("workActive");
+  });
+  e.currentTarget.classList.toggle("workActive");
 }

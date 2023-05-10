@@ -141,13 +141,87 @@
         </section>
         <!-- end of technology row -->
       </div>
-      <div class="row">
+      <div class="work-row">
         <!-- Work Section -->
         <section id="work" class="col s8 flexbox">
           <!-- section content -->
           <div id="section-content">
             <h3>Work</h3>
-            <!-- todo- swipeable carousel? -->
+            <ul id="work-ul">
+              <li>
+                <a href="#work1">Work 1</a>
+              </li>
+              <li><a href="#work2">Work 2</a></li>
+              <li><a href="#work3">Work 3</a></li>
+              <li><a href="#work4">Work 4</a></li>
+              <li><a href="#work5">Work 5</a></li>
+            </ul>
+            <div id="work1" class="workInactive workActive">
+              <h4>Title of Work</h4>
+              <h5>Technologies:</h5>
+              <ul class="specific-work-ul">
+                <li>Tech 1</li>
+                <li>Tech 2</li>
+                <li>Tech 3</li>
+                <li>Tech 4</li>
+                <li>Tech 5</li>
+                <li>Tech 6</li>
+                <li>Tech 7</li>
+                <li>Tech 8</li>
+              </ul>
+              <div class="flexbox work-links">
+                <span>Link to Repo</span>
+                <span>Link to Live</span>
+              </div>
+            </div>
+            <div id="work2" class="workInactive">
+              <h4>Title of Work</h4>
+              <h5>Technologies:</h5>
+              <ul class="specific-work-ul">
+                <li>Tech 1</li>
+                <li>Tech 2</li>
+                <li>Tech 3</li>
+                <li>Tech 4</li>
+              </ul>
+              <p>Link to Repo</p>
+              <p>Link to Live</p>
+            </div>
+            <div id="work3" class="workInactive">
+              <h4>Title of Work</h4>
+              <h5>Technologies:</h5>
+              <ul class="specific-work-ul">
+                <li>Tech 1</li>
+                <li>Tech 2</li>
+                <li>Tech 3</li>
+                <li>Tech 4</li>
+              </ul>
+              <p>Link to Repo</p>
+              <p>Link to Live</p>
+            </div>
+            <div id="work4" class="workInactive">
+              <h4>Title of Work</h4>
+              <h5>Technologies:</h5>
+              <ul class="specific-work-ul">
+                <li>Tech 1</li>
+                <li>Tech 2</li>
+                <li>Tech 3</li>
+                <li>Tech 4</li>
+              </ul>
+              <p>Link to Repo</p>
+              <p>Link to Live</p>
+            </div>
+            <div id="work5" class="workInactive">
+              <h4>Title of Work</h4>
+              <h5>Technologies:</h5>
+              <ul class="specific-work-ul">
+                <li>Tech 1</li>
+                <li>Tech 2</li>
+                <li>Tech 3</li>
+                <li>Tech 4</li>
+              </ul>
+              <p>Link to Repo</p>
+              <p>Link to Live</p>
+            </div>
           </div>
           <!-- end of work section -->
         </section>
@@ -189,7 +263,7 @@
           </div>
         </section>
       </div>
-      <div class="row">
+      <div class="contact-row">
         <!-- Contact Section -->
         <section id="contact" class="col s5 flexbox">
           <!-- contact header -->
@@ -228,22 +302,22 @@
                 </a>
               </li>
             </ul>
-            <div id="contact-form-trigger" class="btn modal-trigger">
-              <a href="#contact-form">
-                <p>
-                  <i class="material-icons tiny left">open_in_new</i>Open
-                  Contact Form
-                </p></a
-              >
-            </div>
-            <div id="contact-form" class="modal">
-              <div class="modal-content">
-                <h4>Contact Me</h4>
-                <img
-                  src="images/title.gif"
-                  alt="A Nice &amp; Simple Contact Form"
-                /><br /><br />
 
+            <a
+              href="#modal2"
+              id="contact-form-trigger"
+              class="btn modal-trigger"
+            >
+              <p>
+                <i class="material-icons tiny left">open_in_new</i>Open Contact
+                Form
+              </p>
+            </a>
+
+            <div id="modal2" class="modal">
+              <div class="modal-content">
+                <h2>Contact Me</h2>
+                <p>ALERT- This form is not functional until I learn PHP</p>
                 <div id="contact-area">
                   <form method="post" action="contactengine.php">
                     <label for="Name">Name:</label>
@@ -270,23 +344,26 @@
 
                   <div style="clear: both"></div>
                 </div>
-                <p>
-                  Base code for contact form by
-                  <a href="http://css-tricks.com">Chris Coyier at CSS-Tricks</a>
-                </p>
-                <p>Additional styling provided by myself</p>
+                <div id="modal-p">
+                  <p>
+                    Base code for contact form by
+                    <a href="http://css-tricks.com"
+                      >Chris Coyier at CSS-Tricks</a
+                    >
+                  </p>
+                  <p>Additional styling provided by myself</p>
+                </div>
               </div>
               <div class="modal-footer">
-                <a href="#!" class="modal-close btn-flat">Agree</a>
+                <a href="#" class="modal-close btn-flat">Close</a>
               </div>
             </div>
-            <!-- TODO- contact form? -->
           </div>
           <!-- End of contact section -->
         </section>
       </div>
       <!-- End of row -->
-      <div class="row">
+      <div class="resume-row">
         <!-- Resume Section -->
         <section id="resume" class="col s8 flexbox">
           <!-- section content -->
