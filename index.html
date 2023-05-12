@@ -146,17 +146,29 @@
         <section id="work" class="flexbox">
           <!-- section content -->
           <div id="section-content">
-            <ul id="work-ul">
-              <li>
-                <a href="#work1">Work 1</a>
-              </li>
-              <li><a href="#work2">Work 2</a></li>
-              <li><a href="#work3">Work 3</a></li>
-              <li><a href="#work4">Work 4</a></li>
-              <li><a href="#work5">Work 5</a></li>
-            </ul>
-            <div id="work1" class="workInactive workActive">
-              <h4>Title of Work</h4>
+            <div id="column-container work-upper">
+              <!-- Tabs -->
+              <ul class="tabs" id="tab-container work-tabs">
+                <li class="tab user-style-tab">
+                  <a href="#work1">Frameworks</a>
+                </li>
+                <li class="tab user-style-tab">
+                  <a href="#work2">Datadivbases</a>
+                </li>
+                <li class="tab user-style-tab">
+                  <a href="#work3">Languages</a>
+                </li>
+                <li class="tab user-style-tab">
+                  <a href="#work4">Other Tools</a>
+                </li>
+                <li class="tab user-style-tab">
+                  <a href="#work5">Other Tools</a>
+                </li>
+              </ul>
+              <!-- End of tabs -->
+            </div>
+            <div id="work1" class="work1">
+              <h4>Title of Work 1</h4>
               <h5>Technologies:</h5>
               <ul class="specific-work-ul">
                 <li>Tech 1</li>
@@ -173,53 +185,77 @@
                 <span>Link to Live</span>
               </div>
             </div>
-            <div id="work2" class="workInactive">
-              <h4>Title of Work</h4>
+            <div id="work2" class="work2">
+              <h4>Title of Work 2</h4>
               <h5>Technologies:</h5>
               <ul class="specific-work-ul">
                 <li>Tech 1</li>
                 <li>Tech 2</li>
                 <li>Tech 3</li>
                 <li>Tech 4</li>
+                <li>Tech 5</li>
+                <li>Tech 6</li>
+                <li>Tech 7</li>
+                <li>Tech 8</li>
               </ul>
-              <p>Link to Repo</p>
-              <p>Link to Live</p>
+              <div class="flexbox work-links">
+                <span>Link to Repo</span>
+                <span>Link to Live</span>
+              </div>
             </div>
-            <div id="work3" class="workInactive">
-              <h4>Title of Work</h4>
+            <div id="work3" class="work3">
+              <h4>Title of Work 3</h4>
               <h5>Technologies:</h5>
               <ul class="specific-work-ul">
                 <li>Tech 1</li>
                 <li>Tech 2</li>
                 <li>Tech 3</li>
                 <li>Tech 4</li>
+                <li>Tech 5</li>
+                <li>Tech 6</li>
+                <li>Tech 7</li>
+                <li>Tech 8</li>
               </ul>
-              <p>Link to Repo</p>
-              <p>Link to Live</p>
+              <div class="flexbox work-links">
+                <span>Link to Repo</span>
+                <span>Link to Live</span>
+              </div>
             </div>
-            <div id="work4" class="workInactive">
-              <h4>Title of Work</h4>
+            <div id="work4" class="work4">
+              <h4>Title of Work 4</h4>
               <h5>Technologies:</h5>
               <ul class="specific-work-ul">
                 <li>Tech 1</li>
                 <li>Tech 2</li>
                 <li>Tech 3</li>
                 <li>Tech 4</li>
+                <li>Tech 5</li>
+                <li>Tech 6</li>
+                <li>Tech 7</li>
+                <li>Tech 8</li>
               </ul>
-              <p>Link to Repo</p>
-              <p>Link to Live</p>
+              <div class="flexbox work-links">
+                <span>Link to Repo</span>
+                <span>Link to Live</span>
+              </div>
             </div>
-            <div id="work5" class="workInactive">
-              <h4>Title of Work</h4>
+            <div id="work5" class="work5">
+              <h4>Title of Work 5</h4>
               <h5>Technologies:</h5>
               <ul class="specific-work-ul">
                 <li>Tech 1</li>
                 <li>Tech 2</li>
                 <li>Tech 3</li>
                 <li>Tech 4</li>
+                <li>Tech 5</li>
+                <li>Tech 6</li>
+                <li>Tech 7</li>
+                <li>Tech 8</li>
               </ul>
-              <p>Link to Repo</p>
-              <p>Link to Live</p>
+              <div class="flexbox work-links">
+                <span>Link to Repo</span>
+                <span>Link to Live</span>
+              </div>
             </div>
           </div>
           <!-- end of work section -->
@@ -264,7 +300,7 @@
       </div>
       <div class="contact-row">
         <!-- Contact Section -->
-        <section id="contact" class="flexbox">
+        <section id="contact">
           <!-- contact header -->
           <h3>Contact</h3>
           <div id="resume-download-container">
@@ -280,7 +316,7 @@
             >
           </div>
           <!-- contact content -->
-          <div id="section-content contact-content">
+          <div id="contact-content">
             <ul id="contact-ul">
               <li>
                 <a href="tel:7728342342">
@@ -310,10 +346,10 @@
 
             <a
               href="#modal2"
-              id="contact-form-trigger "
               class="btn modal-trigger"
+              id="contact-form-trigger "
             >
-              <p id="contact-icon">
+              <p id="contact-icon" class="valign-wrapper">
                 <i class="material-icons tiny left">open_in_new</i>Contact Form
               </p>
             </a>

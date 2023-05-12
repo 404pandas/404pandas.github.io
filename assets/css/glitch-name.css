@@ -239,9 +239,14 @@
   overflow: visible;
   mix-blend-mode: difference;
   height: 100vh;
+  background-repeat: repeat-y;
 }
 
 .scanlines::before {
+  overflow: visible;
+
+  height: 100vh !important;
+  background-repeat: repeat;
   content: "";
   position: absolute;
   width: 100vw;
@@ -295,5 +300,17 @@
   }
   2% {
     transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .scanlines {
+    min-height: 250vh;
+    max-height: 250vh;
+  }
+
+  .scanlines::before {
+    min-height: 250vh;
+    max-height: 250vh;
   }
 }

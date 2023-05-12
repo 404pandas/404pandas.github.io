@@ -82,6 +82,7 @@ html {
   color: var(--light-blue) !important;
   /* todo- add text shadow */
   background-color: #121629;
+  overflow-x: scroll;
 }
 
 /* ---------------------       Body       --------------------- */
@@ -185,7 +186,7 @@ h5 {
 .scanlines {
   height: 100vh;
   width: 100vw;
-  background-repeat: repeat;
+  background-repeat: repeat-y;
   overflow: visible !important;
 }
 
@@ -489,7 +490,10 @@ h5 {
   top: 20px;
   right: 47px;
 }
-
+#section-content ul {
+  top: 70px;
+  margin-left: 25px;
+}
 /* About Me */
 #about-me {
   background-image: url("../images/about-me-container.svg");
@@ -569,35 +573,39 @@ h5 {
   white-space: normal;
   width: 200px;
   height: 80px;
-  top: 105px;
+  top: 100px;
   left: 80px;
   font-size: 0.8rem;
   -webkit-column-count: 2; /* Chrome/Opera, Safari */
   -moz-column-count: 2; /* Mozilla Firefox */
   column-count: 2;
+  vertical-align: middle;
 }
 
 #contact i {
-  height: 25px;
-  vertical-align: middle;
+  margin-bottom: 6px;
 }
 
 #contact li {
-  vertical-align: middle;
   line-height: 25px;
+  vertical-align: middle;
+}
+
+#contact-content {
+  position: absolute;
+  top: 0px;
+}
+
+div#contact-content a.btn {
+  height: 35px;
+  width: 217px;
+  position: absolute;
+  top: 160px;
+  left: 66px;
+  text-align: center;
 }
 
 /* ~~~ Contact Form Modal ~~~~ */
-
-#contact-form-trigger {
-  height: 30px;
-  width: 200px;
-  position: absolute !important;
-  bottom: 106px;
-  left: 75px;
-  font-size: 0.7rem;
-  vertical-align: middle;
-}
 
 #modal2 {
   background-color: #121629;
@@ -701,18 +709,12 @@ label {
   top: 450px;
 }
 
-#work h3 {
-  margin-left: 50%;
-  margin-top: 14%;
-  color: var(--light-blue);
-}
-
-#work-ul {
+ul#work-ul {
   position: absolute;
-  left: 170px;
-  top: 60px;
-  height: 30px;
-  width: 110px;
+  left: 150px;
+  top: 40px;
+  height: 50px;
+  width: 100px;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -728,7 +730,7 @@ label {
 #work5 {
   position: absolute;
   top: 100px;
-  right: 90px;
+  right: 80px;
 }
 
 .specific-work-ul {
@@ -760,6 +762,7 @@ label {
 #work5 h4 {
   line-height: 16px !important;
   margin: 5px;
+  left: 100px;
   color: var(--light-blue);
 }
 
@@ -774,14 +777,63 @@ label {
 
 .work-links {
   justify-content: space-around;
+  margin-left: 20px;
+}
+.tabs {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow-x: visible;
+  overflow-y: visible;
+  background: transparent;
+  /* modal= 1003 */
+  position: absolute;
+  left: 100px;
+  top: 5px;
+  width: 190px;
 }
 
-.workInactive {
-  display: none !important;
+.tabs-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
-.workActive {
-  display: inline !important;
+/* ~~~~~~ Fixes line height for the line items ~~~~~~ */
+.tabs {
+  line-height: 20px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  margin: 1%;
+  border: 0.1px solid var(--light-blue);
+  z-index: 5000;
+  height: 40px;
+  width: 125px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.user-style-tab a {
+  text-transform: capitalize;
+}
+
+.user-style-tab:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.tabs-content {
+  overflow: visible;
+}
+
+#work-tabs.tabs {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+}
+#work #section-content ul.tabs {
+  width: 110px;
+  position: absolute !important;
+  top: 45px !important;
+  left: 135px !important;
+  margin-bottom: 50px;
 }
 
 /* Extra */
@@ -824,7 +876,7 @@ label {
     top: 90px;
   }
   body {
-    height: 500vh;
+    height: 250vh;
   }
 
   #about-me {
@@ -844,10 +896,7 @@ label {
     top: 77px;
     left: 45px;
   }
-  #section-content ul {
-    top: 70px;
-    margin-left: 25px;
-  }
+
   div#about-p-tabs {
     display: flex;
     position: absolute;
@@ -867,6 +916,12 @@ label {
     top: 0px !important;
   }
 
+  #contact-form-trigger {
+    margin-top: 100px !important;
+    left: 75px;
+    font-size: 0.7rem;
+  }
+
   #contact-content {
     position: absolute !important;
     top: 100;
@@ -877,10 +932,75 @@ label {
     width: 150px !important;
     height: 20px !important;
     font-size: 0.75rem;
+    margin-top: 2px;
   }
 
   #contact-icon i {
     font-size: 0.75rem;
+    margin-bottom: 9px;
+  }
+
+  #technologies {
+    top: 1200px;
+    left: 20px;
+  }
+
+  #tab-container {
+    bottom: 100px;
+    left: 75px;
+  }
+  ul#tab-container {
+    top: 5px;
+  }
+
+  #tech1,
+  #tech2,
+  #tech3,
+  #tech4 {
+    top: 180px;
+    left: 88px;
+  }
+
+  #tech1 ul {
+    top: 43px;
+    left: 0px;
+  }
+
+  #tech2 ul {
+    top: 30px;
+    left: 30px;
+  }
+  #tech3 ul {
+    top: 58px;
+    left: 20px;
+  }
+  #tech4 ul {
+    top: 23px;
+    left: 10px;
+  }
+  #work {
+    top: 1600px;
+    left: 20px;
+  }
+  /* 
+  ul#work-ul {
+    top: 50px;
+    left: 150px;
+  } */
+
+  #work1 {
+  }
+
+  #work2 {
+  }
+  #work3 {
+  }
+  #work4 {
+  }
+
+  .work-tab {
+    top: 0px;
+    left: 0px;
   }
 }
 
