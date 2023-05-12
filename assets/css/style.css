@@ -77,12 +77,10 @@ a {
 /* html */
 
 html {
-  margin: 0;
   /* height: 100vh; */
   color: var(--light-blue) !important;
   /* todo- add text shadow */
   background-color: #121629;
-  overflow-x: scroll;
 }
 
 /* ---------------------       Body       --------------------- */
@@ -92,10 +90,7 @@ body {
   background-image: url("../images/background-image.svg");
   background-repeat: repeat;
   background-size: cover;
-  margin: 0;
-  width: 100vw;
   height: 100vh;
-  aspect-ratio: auto;
 }
 
 /* A-hrefs */
@@ -184,8 +179,7 @@ h5 {
 
 /* Scanlines */
 .scanlines {
-  height: 100vh;
-  width: 100vw;
+  height: 250vh;
   background-repeat: repeat-y;
   overflow: visible !important;
 }
@@ -292,8 +286,9 @@ h5 {
   position: relative;
   height: 20px;
   width: 215px;
-  top: 16px;
-  right: -30px;
+  top: -52px;
+  left: 6px;
+  z-index: 900;
 }
 
 .indicator {
@@ -811,7 +806,7 @@ ul#work-ul {
   overflow-y: scroll;
 }
 
-.user-style-tab a {
+.user-style-tab a span {
   text-transform: capitalize;
 }
 
@@ -821,6 +816,11 @@ ul#work-ul {
 
 .tabs-content {
   overflow: visible;
+}
+
+span.work-list-text {
+  margin: 0px;
+  font-size: 0.4rem;
 }
 
 #work-tabs.tabs {
@@ -834,6 +834,15 @@ ul#work-ul {
   top: 45px !important;
   left: 135px !important;
   margin-bottom: 50px;
+}
+
+ul.tabs {
+  z-index: 900;
+  background: rgba(255, 255, 255, 0.1);
+}
+ul.tabs:hover {
+  z-index: 900;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 /* Extra */
