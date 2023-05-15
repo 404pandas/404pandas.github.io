@@ -917,6 +917,10 @@ ul.tabs:hover {
   #about-me h3 {
     top: -7px;
   }
+  #about-me img {
+    top: 77px;
+    left: 45px;
+  }
   .panda-coding {
     max-width: 300px !important;
     min-width: 300px !important;
