@@ -192,7 +192,7 @@ h5 {
   min-width: 300px;
   max-width: 300px;
   top: 40px;
-  right: 100px;
+  left: 900px;
 }
 
 /*  Name */
@@ -553,7 +553,7 @@ h5 {
   max-height: 300px;
   position: absolute;
   width: 400px;
-  right: 10px;
+  left: 980px;
   top: 400px;
 }
 
@@ -820,7 +820,7 @@ ul#work-ul {
 
 span.work-list-text {
   margin: 0px;
-  font-size: 0.4rem;
+  font-size: 0.7rem;
 }
 
 #work-tabs.tabs {
@@ -855,6 +855,10 @@ ul.tabs:hover {
   bottom: 5%;
 }
 
+.textEffect-container {
+  right: 10px;
+}
+
 /* -------------------       Footer       --------------------- */
 
 /* -------------------       Button       --------------------- */
@@ -878,20 +882,34 @@ ul.tabs:hover {
 /* ----------       Mobile Devices <= 600px S       ------------ */
 
 @media only screen and (max-width: 599px) {
+  html {
+    min-height: 220vh !important;
+    max-height: 220vh !important;
+  }
+  body {
+    min-height: 220vh !important;
+    max-height: 220vh !important;
+  }
+  .scanlines {
+    min-height: 220vh !important;
+    max-height: 220vh !important;
+  }
   .textEffect {
     font-size: 3rem !important;
     max-width: 200px !important;
     left: -100px;
-    top: 90px;
+    top: 40px;
   }
-  body {
-    height: 250vh;
+  .textEffect-container {
+    top: 180px !important;
+    left: 200px;
   }
 
   #about-me {
-    top: 750px;
     max-height: 400px;
     min-height: 400px;
+    top: 1050px !important;
+    left: 40px !important;
   }
   h3 {
     font-size: 1.25rem !important;
@@ -900,23 +918,35 @@ ul.tabs:hover {
     top: -7px;
   }
   .panda-coding {
-    max-width: 250px !important;
-    min-width: 250px !important;
+    max-width: 300px !important;
+    min-width: 300px !important;
     top: 77px;
     left: 45px;
   }
 
-  div#about-p-tabs {
+  #section-content div#about-p-tags {
     display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 500px;
+    top: 170px;
+    margin-left: 10px;
+    margin-right: 20px;
+    height: 140px;
   }
+
   #contact {
     max-height: 270px !important;
     min-height: 270px !important;
     width: 500px;
     top: 380px;
     left: 50px;
+  }
+
+  div#contact-content a.btn {
+    width: 200px;
+    height: 30px;
+    left: 58px;
+    top: 150px;
   }
 
   a#contact-form-trigger {
@@ -944,14 +974,25 @@ ul.tabs:hover {
     margin-top: 2px;
   }
 
+  #contact ul {
+    top: 90px;
+    left: 60px;
+  }
   #contact-icon i {
     font-size: 0.75rem;
     margin-bottom: 9px;
   }
-
+  #resume-download-container {
+    top: 28px;
+    right: 500px;
+    line-height: 1px;
+  }
+  #resume-download-icon {
+    margin-left: 10px;
+  }
   #technologies {
-    top: 1200px;
-    left: 20px;
+    top: 300px !important;
+    left: 10px !important;
   }
 
   #tab-container {
@@ -959,7 +1000,8 @@ ul.tabs:hover {
     left: 75px;
   }
   ul#tab-container {
-    top: 5px;
+    top: 70px;
+    left: 100px;
   }
 
   #tech1,
@@ -988,8 +1030,8 @@ ul.tabs:hover {
     left: 10px;
   }
   #work {
-    top: 1600px;
-    left: 20px;
+    top: 1450px !important;
+    left: 20px !important;
   }
   /* 
   ul#work-ul {
@@ -1021,6 +1063,55 @@ ul.tabs:hover {
 /* ----------       Desktop Devices > 992px L     ------------- */
 
 @media only screen and (max-width: 992px) {
+  body {
+    height: 120vh;
+  }
+
+  .panda-coding {
+    top: 0px;
+    left: 50px;
+  }
+
+  .textEffect-container {
+    top: 180px !important;
+    left: 30px !important;
+  }
+
+  #about-me {
+    top: 40px;
+    left: 600px;
+  }
+
+  #technologies {
+    top: 400px;
+    right: 100px;
+  }
+
+  #tech1 ul {
+    top: 50px;
+  }
+
+  #tech2 ul {
+    top: 30px;
+    left: 30px;
+  }
+  #tech3 ul {
+    top: 58px;
+    left: 20px;
+  }
+
+  #tech4 ul {
+    top: 20px;
+    left: 10px;
+  }
+  #contact {
+    top: 700px;
+    left: 50px;
+  }
+  #work {
+    top: 650px;
+    left: 450px;
+  }
 }
 
 /* ------       Large Desktop Devices > 1200px  XL      ------ */
