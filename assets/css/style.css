@@ -219,7 +219,7 @@ h5 {
 
 .modal-content h5 {
   position: relative;
-  width: 250px;
+  width: 175px;
   font-size: 1.3rem;
   top: 9px;
   right: 13px;
@@ -227,12 +227,22 @@ h5 {
 
 #modal-text {
   position: relative;
-  width: 250px;
+  width: 175px;
   right: 13px;
   bottom: -10px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
+#panda-modal-content {
+  left: 35px;
+}
+#react-btn {
+  font-size: 0.7rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #modal1 {
   background-image: url(../images/mind-the-mess-container.svg);
   background-repeat: no-repeat;
@@ -622,7 +632,7 @@ div#contact-content a.btn {
 
 .modal-content p {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 #contact-area input,
