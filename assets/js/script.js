@@ -24,35 +24,25 @@ document.addEventListener("DOMContentLoaded", function (e) {
 // );
 
 // Close button javascript
-window.onload = function () {
-  document.getElementById("frameworks-close-btn").onclick = function () {
-    this.parentNode.parentNode.remove();
-    return false;
-  };
-};
+// window.onload = function () {
+//   document.getElementById("frameworks-close-btn").onclick = function () {
+//     this.parentNode.parentNode.remove();
+//     return false;
+//   };
+// };
 
 // Tab Javascript
-let el = document.querySelector(".tabs");
+let tabsContainer = document.querySelector(".tabs");
 let options = { swipeable: true };
-var instance = M.Tabs.init(el, options);
+var instance = M.Tabs.init(tabsContainer, options);
 var instance = M.Tabs.getInstance(elem);
 
 // On-click display for technologies
-function showTech1() {
-  let tech1Container = document.querySelector("#tech1");
-  console.log(tech1Container);
-  tech1Container.classList.remove("hidden");
-  console.log(tech1Container);
-}
+// function showTech1() {
+//   let tech1Container = document.querySelector("#tech1");
+//   console.log(tech1Container);
+//   tech1Container.classList.remove("hidden");
+//   console.log(tech1Container);
+// }
 
 // Work if/else render
-const allWork = document.querySelectorAll(".workInactive");
-
-allWork.forEach((work) => work.addEventListener("click", toggleActiveWork));
-
-function toggleActiveWork(e) {
-  works.forEach((work) => {
-    work.classList.remove("workActive");
-  });
-  e.currentTarget.classList.toggle("workActive");
-}

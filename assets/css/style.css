@@ -724,15 +724,7 @@ ul#work-ul {
   overflow-y: scroll;
 }
 
-#work li {
-  line-height: 20px;
-}
-
-#work1,
-#work2,
-#work3,
-#work4,
-#work5 {
+.work {
   position: absolute;
   top: 100px;
   right: 80px;
@@ -743,39 +735,23 @@ ul#work-ul {
   font-size: 0.6rem;
 }
 
-#work1 span,
-#work2 span,
-#work3 span,
-#work4 span,
-#work5 span {
+.work span {
   line-height: 16px;
   font-size: 0.6rem;
 }
 
-#work1 li,
-#work2 li,
-#work3 li,
-#work4 li,
-#work5 li {
+.work li {
   line-height: 16px;
 }
 
-#work1 h4,
-#work2 h4,
-#work3 h4,
-#work4 h4,
-#work5 h4 {
+.work h4 {
   line-height: 16px !important;
   margin: 5px;
   left: 100px;
   color: var(--light-blue);
 }
 
-#work1 h5,
-#work2 h5,
-#work3 h5,
-#work4 h5,
-#work5 h5 {
+.work h5 {
   line-height: 16px !important;
   margin: 5px;
 }

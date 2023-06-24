@@ -4,7 +4,8 @@
   "description": "Professional portfolio",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.html"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/404pandas/404pandas.github.io#readme",
   "dependencies": {
     "materialize-css": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
