@@ -2,10 +2,10 @@
   "name": "404pandas.github.io",
   "version": "1.0.0",
   "description": "Professional portfolio",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.html"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/404pandas/404pandas.github.io#readme",
   "dependencies": {
-    "materialize-css": "^1.0.0"
+    "express": "^4.18.2",
+    "materialize-css": "^1.0.0-rc.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

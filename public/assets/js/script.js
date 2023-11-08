@@ -32,10 +32,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
 // };
 
 // Tab Javascript
-let tabsContainer = document.querySelector(".tabs");
+// Technology tabs
+let tabsContainer = document.querySelector("#tab-container");
 let options = { swipeable: true };
 var instance = M.Tabs.init(tabsContainer, options);
-var instance = M.Tabs.getInstance(elem);
+var instance = M.Tabs.getInstance(this);
+
+// Work tabs
+let worktabsContainer = document.querySelector("#work-tabs");
+var instance = M.Tabs.init(worktabsContainer, options);
+var instance = M.Tabs.getInstance(this);
 
 // On-click display for technologies
 // function showTech1() {
