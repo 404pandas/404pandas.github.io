@@ -4,21 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mary Elenius | Full Stack Developer</title>
+    <!-- Fonts: preconnect then async load to avoid render-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Material Icons: async load -->
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+      />
+    </noscript>
+
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/colors.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Scripts: defer so they download in parallel and don't block render -->
+    <script src="./assets/js/gsap.min.js" defer></script>
+    <script src="./assets/js/ScrollTrigger.min.js" defer></script>
+    <script src="./assets/js/animations.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
   </head>
-  <body>
+  <body class="js-loading">
     <div class="scanlines" aria-hidden="true"></div>
 
     <div class="page-layout">
@@ -242,6 +268,5 @@
       </main>
     </div>
 
-    <script src="./assets/js/script.js"></script>
   </body>
 </html>

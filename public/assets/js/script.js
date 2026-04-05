@@ -136,23 +136,30 @@ const projects = [
 // ===== TECHNOLOGIES TABS =====
 function initTabs() {
   const tabBtns = document.querySelectorAll(".tab-btn");
-  const tabPanels = document.querySelectorAll(".tab-panel");
 
   tabBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       const target = btn.dataset.target;
+      const newPanel = document.getElementById(target);
+      const oldPanel = document.querySelector(".tab-panel.active");
 
+      if (!newPanel || newPanel === oldPanel) return;
+
+      // Update ARIA + button states immediately
       tabBtns.forEach((b) => {
         b.classList.remove("active");
         b.setAttribute("aria-selected", "false");
       });
-      tabPanels.forEach((p) => p.classList.remove("active"));
-
       btn.classList.add("active");
       btn.setAttribute("aria-selected", "true");
 
-      const panel = document.getElementById(target);
-      if (panel) panel.classList.add("active");
+      // Delegate panel switching to GSAP
+      if (typeof animateTabSwitch === "function" && oldPanel) {
+        animateTabSwitch(oldPanel, newPanel);
+      } else {
+        if (oldPanel) oldPanel.classList.remove("active");
+        newPanel.classList.add("active");
+      }
     });
   });
 }
@@ -164,7 +171,6 @@ function initProjects() {
 
   if (!navList || !detailPane) return;
 
-  // Build nav list
   projects.forEach((project, index) => {
     const li = document.createElement("li");
     li.dataset.index = index;
@@ -177,13 +183,16 @@ function initProjects() {
     navList.appendChild(li);
   });
 
-  // Render first project
   renderProject(0);
 }
 
 function selectProject(index) {
   const navItems = document.querySelectorAll("#project-nav-list li");
-  navItems.forEach((item) => item.classList.remove("active"));
+  navItems.forEach((item) => {
+    item.classList.remove("active");
+    gsap.killTweensOf(item);
+    gsap.set(item, { backgroundColor: "" });
+  });
 
   const target = document.querySelector(
     `#project-nav-list li[data-index="${index}"]`
@@ -191,6 +200,7 @@ function selectProject(index) {
   if (target) {
     target.classList.add("active");
     target.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    if (typeof flashNavItem === "function") flashNavItem(target);
   }
 
   renderProject(index);
@@ -218,6 +228,8 @@ function renderProject(index) {
     <p class="project-description">${project.description}</p>
     <div class="project-links">${githubBtn}${liveBtn}</div>
   `;
+
+  if (typeof animateDetailIn === "function") animateDetailIn(detailPane);
 }
 
 // ===== ABOUT NAVIGATOR =====
@@ -241,12 +253,19 @@ function initAbout() {
 
 function selectAbout(index) {
   const navItems = document.querySelectorAll("#about-nav-list li");
-  navItems.forEach((item) => item.classList.remove("active"));
+  navItems.forEach((item) => {
+    item.classList.remove("active");
+    gsap.killTweensOf(item);
+    gsap.set(item, { backgroundColor: "" });
+  });
 
   const target = document.querySelector(
     `#about-nav-list li[data-index="${index}"]`
   );
-  if (target) target.classList.add("active");
+  if (target) {
+    target.classList.add("active");
+    if (typeof flashNavItem === "function") flashNavItem(target);
+  }
 
   renderAbout(index);
 }
@@ -260,6 +279,8 @@ function renderAbout(index) {
     <h3 class="about-chapter-title">${chapter.title}</h3>
     <p class="about-chapter-content">${chapter.content}</p>
   `;
+
+  if (typeof animateDetailIn === "function") animateDetailIn(detailPane);
 }
 
 // ===== INIT =====
@@ -267,4 +288,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initTabs();
   initAbout();
   initProjects();
+
+  if (typeof initPageLoad === "function") initPageLoad();
+  if (typeof initScrollAnimations === "function") initScrollAnimations();
+  if (typeof initAmbient === "function") initAmbient();
+  if (typeof initInteractions === "function") initInteractions();
+  if (typeof initPanelTitleScans === "function") initPanelTitleScans();
 });

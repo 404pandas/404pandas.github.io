@@ -19,6 +19,12 @@
   --transition: 0.18s ease;
 }
 
+/* ===== FOUC GUARD (removed by GSAP boot sequence) ===== */
+.js-loading .sidebar,
+.js-loading .panel {
+  opacity: 0;
+}
+
 /* ===== RESET ===== */
 *,
 *::before,
@@ -815,6 +821,50 @@ body {
 }
 .resume-btn .material-icons {
   font-size: 1rem;
+}
+
+/* ===== GSAP ANIMATION HELPERS ===== */
+
+/* Panel scan sweep line */
+.panel-scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--accent) 30%,
+    rgba(140, 213, 207, 0.9) 50%,
+    var(--accent) 70%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 50;
+  filter: blur(0.5px);
+}
+
+/* Blinking cursor injected after role typewriter */
+.type-cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.85em;
+  background: var(--accent);
+  margin-left: 3px;
+  vertical-align: -0.1em;
+  border-radius: 1px;
+}
+
+/* Spark particles spawned on click */
+.spark {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 6px var(--accent-glow);
 }
 
 /* ===== RESPONSIVE ===== */
