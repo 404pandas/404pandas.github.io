@@ -823,54 +823,22 @@ body {
   font-size: 1rem;
 }
 
-/* ===== PERFORMANCE HINTS ===== */
-/* Only the panda gets a permanent compositor layer — it loops forever.
-   Panels are promoted temporarily by GSAP during animations, then demoted. */
+/* ===== CSS ANIMATIONS (replaces all GSAP loops) ===== */
+
+/* Panda float */
+@keyframes pandaFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
 .panda-coding {
-  will-change: transform;
+  animation: pandaFloat 2.9s ease-in-out infinite;
 }
 
-/* Resume button pulse — opacity only (compositor-friendly).
-   The glow lives on ::before so only its opacity animates, never box-shadow. */
-.resume-btn {
-  position: relative;
+/* Blinking cursor after typewriter */
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
-.resume-btn::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border: 1px solid rgba(140, 213, 207, 0.5);
-  box-shadow: 0 0 18px rgba(140, 213, 207, 0.5);
-  pointer-events: none;
-  animation: resumeGlowPulse 2.1s ease-in-out infinite;
-}
-@keyframes resumeGlowPulse {
-  0%, 100% { opacity: 0; }
-  50%       { opacity: 1; }
-}
-
-/* ===== GSAP ANIMATION HELPERS ===== */
-
-/* Panel scan sweep line */
-.panel-scan {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    var(--accent) 30%,
-    rgba(140, 213, 207, 0.9) 50%,
-    var(--accent) 70%,
-    transparent 100%
-  );
-  pointer-events: none;
-  z-index: 50;
-  filter: blur(0.5px);
-}
-
-/* Blinking cursor injected after role typewriter */
 .type-cursor {
   display: inline-block;
   width: 0.5em;
@@ -879,7 +847,89 @@ body {
   margin-left: 3px;
   vertical-align: -0.1em;
   border-radius: 1px;
+  animation: cursorBlink 1.1s steps(1) infinite;
 }
+
+/* Resume button glow pulse (opacity on ::before — no repaint) */
+.resume-btn {
+  position: relative;
+}
+.resume-btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border: 1px solid rgba(140, 213, 207, 0.5);
+  box-shadow: 0 0 16px rgba(140, 213, 207, 0.45);
+  pointer-events: none;
+  animation: resumeGlow 2.1s ease-in-out infinite;
+}
+@keyframes resumeGlow {
+  0%, 100% { opacity: 0; }
+  50%       { opacity: 1; }
+}
+
+/* Panel hover lift — CSS transition, zero JS.
+   .gsap-animating disables it while GSAP entrance is running. */
+.panel {
+  transition: transform 0.25s ease;
+}
+.panel.gsap-animating {
+  transition: none;
+}
+.panel:hover {
+  transform: translateY(-3px);
+}
+
+/* Badge hover */
+.badge {
+  transition: transform 0.2s ease;
+}
+.badge:hover {
+  transform: scale(1.1);
+}
+
+/* Tech list item nudge */
+.tech-list li {
+  transition: transform 0.15s ease, border-left-color 0.15s ease, color 0.15s ease;
+}
+.tech-list li:hover {
+  transform: translateX(5px);
+}
+
+/* Tab button hover */
+.tab-btn {
+  transition: transform 0.15s ease, background var(--transition),
+    color var(--transition), border-color var(--transition);
+}
+.tab-btn:not(.active):hover {
+  transform: scale(1.05);
+}
+
+/* Project link button hover */
+.project-link-btn {
+  transition: transform 0.15s ease, background var(--transition), color var(--transition);
+}
+.project-link-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Resume button hover */
+.resume-btn {
+  transition: transform 0.2s ease, background var(--transition), color var(--transition);
+}
+.resume-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Contact link hover */
+.contact-link {
+  transition: transform 0.2s ease, color var(--transition);
+}
+.contact-link:hover {
+  transform: translateX(3px);
+}
+
+/* ===== GSAP ANIMATION HELPERS ===== */
 
 /* Spark particles spawned on click */
 .spark {

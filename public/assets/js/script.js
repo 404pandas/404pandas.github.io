@@ -295,6 +295,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (typeof initPageLoad === "function") initPageLoad();
   if (typeof initScrollAnimations === "function") initScrollAnimations();
-  if (typeof initAmbient === "function") initAmbient();
-  if (typeof initInteractions === "function") initInteractions();
 });
