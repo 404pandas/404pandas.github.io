@@ -8,6 +8,15 @@ gsap.registerPlugin(ScrollTrigger);
 /* ───── Utilities ───── */
 const _rand = (min, max) => Math.random() * (max - min) + min;
 
+/* Pause all GSAP when tab is hidden; resume when visible */
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    gsap.globalTimeline.pause();
+  } else {
+    gsap.globalTimeline.resume();
+  }
+});
+
 function _typewrite(el, text, durationMs, onDone) {
   el.textContent = "";
   const delay = durationMs / text.length;
@@ -231,13 +240,15 @@ function initAmbient() {
   });
 
   /* Panda rare glitch — x + skewX transforms only, slow interval */
+  let _pandaGlitchCall;
   (function pandaGlitch() {
     gsap.timeline()
       .to(".panda-coding", { x: -6, skewX: 5, duration: 0.055, ease: "none" })
       .to(".panda-coding", { x: 7, skewX: -5, duration: 0.055, ease: "none" })
       .to(".panda-coding", { x: -4, skewX: 2, duration: 0.055, ease: "none" })
       .to(".panda-coding", { x: 0, skewX: 0, duration: 0.13, ease: "power2.out" });
-    gsap.delayedCall(_rand(12, 25), pandaGlitch);
+    if (_pandaGlitchCall) _pandaGlitchCall.kill();
+    _pandaGlitchCall = gsap.delayedCall(_rand(12, 25), pandaGlitch);
   })();
 
   /* Glow pulse — opacity only, compositor-only */
@@ -263,16 +274,14 @@ function initAmbient() {
    4. INTERACTIONS  — hover/click, transform & opacity only
 \* ═══════════════════════════════════════════════════════════ */
 function initInteractions() {
-  /* Panel hover — y transform only, no boxShadow */
+  /* Panel hover — y transform only */
   document.querySelectorAll(".panel").forEach((panel) => {
-    panel.addEventListener("mouseenter", () => {
-      gsap.to(panel, { y: -3, duration: 0.25, ease: "power2.out" });
-      panel.classList.add("panel--hovered");
-    });
-    panel.addEventListener("mouseleave", () => {
-      gsap.to(panel, { y: 0, duration: 0.35, ease: "power2.inOut" });
-      panel.classList.remove("panel--hovered");
-    });
+    panel.addEventListener("mouseenter", () =>
+      gsap.to(panel, { y: -3, duration: 0.25, ease: "power2.out" })
+    );
+    panel.addEventListener("mouseleave", () =>
+      gsap.to(panel, { y: 0, duration: 0.35, ease: "power2.inOut" })
+    );
   });
 
   /* Badge hover bounce */

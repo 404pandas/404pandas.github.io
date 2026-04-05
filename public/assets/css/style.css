@@ -824,36 +824,29 @@ body {
 }
 
 /* ===== PERFORMANCE HINTS ===== */
+/* Only the panda gets a permanent compositor layer — it loops forever.
+   Panels are promoted temporarily by GSAP during animations, then demoted. */
 .panda-coding {
   will-change: transform;
 }
-.panel {
-  will-change: transform, opacity;
-}
 
-/* Panel hover glow via pseudo-element opacity (no repaint) */
-.panel::after {
+/* Resume button pulse — opacity only (compositor-friendly).
+   The glow lives on ::before so only its opacity animates, never box-shadow. */
+.resume-btn {
+  position: relative;
+}
+.resume-btn::before {
   content: "";
   position: absolute;
-  inset: -1px;
-  border-radius: var(--panel-radius);
-  box-shadow: 0 0 0 1px rgba(140, 213, 207, 0.5), 0 6px 30px rgba(140, 213, 207, 0.1);
-  opacity: 0;
+  inset: -2px;
+  border: 1px solid rgba(140, 213, 207, 0.5);
+  box-shadow: 0 0 18px rgba(140, 213, 207, 0.5);
   pointer-events: none;
-  transition: opacity 0.25s ease;
-  z-index: 0;
+  animation: resumeGlowPulse 2.1s ease-in-out infinite;
 }
-.panel--hovered::after {
-  opacity: 1;
-}
-
-/* Resume button pulse — CSS keyframe, zero JS overhead */
-@keyframes resumePulse {
-  0%, 100% { box-shadow: 0 0 8px rgba(140, 213, 207, 0.2); }
-  50%       { box-shadow: 0 0 22px rgba(140, 213, 207, 0.55); }
-}
-.resume-btn {
-  animation: resumePulse 2.1s ease-in-out infinite;
+@keyframes resumeGlowPulse {
+  0%, 100% { opacity: 0; }
+  50%       { opacity: 1; }
 }
 
 /* ===== GSAP ANIMATION HELPERS ===== */
