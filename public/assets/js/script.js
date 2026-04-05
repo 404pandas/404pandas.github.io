@@ -1,7 +1,9 @@
 // Contact form javascript
 document.addEventListener("DOMContentLoaded", function (e) {
   var elems = document.querySelector("#modal2");
-  var instance = M.Modal.init(elems);
+  if (elems) {
+    M.Modal.init(elems);
+  }
 });
 
 // Messy Panda javascript
@@ -35,13 +37,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
 // Technology tabs
 let tabsContainer = document.querySelector("#tab-container");
 let options = { swipeable: true };
-var instance = M.Tabs.init(tabsContainer, options);
-var instance = M.Tabs.getInstance(this);
+M.Tabs.init(tabsContainer, options);
 
 // Work tabs
 let worktabsContainer = document.querySelector("#work-tabs");
-var instance = M.Tabs.init(worktabsContainer, options);
-var instance = M.Tabs.getInstance(this);
+M.Tabs.init(worktabsContainer, options);
 
 // On-click display for technologies
 // function showTech1() {

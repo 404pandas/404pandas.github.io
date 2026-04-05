@@ -550,7 +550,7 @@ h5 {
   margin: 2px;
 }
 
-#section-content div#about-p-tags {
+.section-content div#about-p-tags {
   position: absolute;
   left: 30px;
   top: 140px;
@@ -838,7 +838,7 @@ ul#work-ul {
   overflow: hidden;
   top: 0;
   animation: noise-1 5s linear infinite alternate-reverse,
-    textEffect 10 10.05s infinite;
+    textEffect 10s 10.05s infinite;
 }
 
 .textEffect::after {
@@ -1086,7 +1086,13 @@ ul#work-ul {
 }
 
 .glow {
-  @extend .textEffect;
+  white-space: nowrap;
+  letter-spacing: 0.15rem;
+  bottom: -80px;
+  left: 100px;
+  font-size: 4rem;
+  width: 300px;
+  animation: textEffect 10s 10s infinite;
   text-shadow: 0 0 1000px rgb(223, 191, 191);
   color: transparent;
   position: absolute;
@@ -1150,7 +1156,7 @@ span.work-list-text {
   top: -40px;
   right: -40px;
 }
-#work #section-content ul.tabs {
+#work .section-content ul.tabs {
   width: 110px;
   position: absolute !important;
   top: 45px !important;
