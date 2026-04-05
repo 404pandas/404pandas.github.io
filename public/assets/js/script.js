@@ -293,5 +293,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof initScrollAnimations === "function") initScrollAnimations();
   if (typeof initAmbient === "function") initAmbient();
   if (typeof initInteractions === "function") initInteractions();
-  if (typeof initPanelTitleScans === "function") initPanelTitleScans();
 });
