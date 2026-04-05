@@ -211,6 +211,8 @@ function renderProject(index) {
   const detailPane = document.getElementById("project-detail");
   if (!project || !detailPane) return;
 
+  gsap.killTweensOf(detailPane.querySelectorAll("*"));
+
   const githubBtn = project.github
     ? `<a href="${project.github}" class="project-link-btn" target="_blank" rel="noopener noreferrer">
          <i class="material-icons" aria-hidden="true">code</i> GitHub Repo
@@ -274,6 +276,8 @@ function renderAbout(index) {
   const chapter = aboutChapters[index];
   const detailPane = document.getElementById("about-detail");
   if (!chapter || !detailPane) return;
+
+  gsap.killTweensOf(detailPane.querySelectorAll("*"));
 
   detailPane.innerHTML = `
     <h3 class="about-chapter-title">${chapter.title}</h3>
