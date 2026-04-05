@@ -2,748 +2,246 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mary Elenius</title>
-    <!-- User stylesheets -->
-    <link rel="stylesheet" href="./assets/css/normalize.css" />
-    <link rel="stylesheet" href="./assets/css/colors.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- MUI -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Mary Elenius | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/colors.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <div class="scanlines"></div>
-    <!-- Start of body row -->
-    <div class="row" id="fix-margin-bottom">
-      <!-- Start of aside -->
-      <aside class="flexbox" id="panda-and-name">
-        <!-- Panda image -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <div class="page-layout">
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="sidebar">
         <img
           class="panda-coding"
           src="./assets/images/panda-coding.png"
-          alt="Panda coding in front of a computer screen"
+          alt="Panda coding at a computer"
         />
-        <!-- Start of name -->
-        <div class="nameGlitch">
-          <div class="textEffect-container">
-            <!-- Start of glitch content -->
-            <div class="textEffect" data-text="Mary Elenius">Mary Elenius</div>
-            <div class="glow">Mary Elenius</div>
-            <!-- End of glitch content -->
-            <!-- End of glitch container -->
-          </div>
+        <div class="name-glitch">
+          <div class="textEffect" data-text="Mary Elenius">Mary Elenius</div>
+          <div class="glow" aria-hidden="true">Mary Elenius</div>
         </div>
-        <!-- End of name -->
+        <p class="sidebar-role">Full Stack Developer</p>
       </aside>
-      <!-- End of aside -->
-      <div id="technology-row" class="row">
-        <!-- Technology section -->
-        <section id="technologies" class="flexbox">
-          <!-- Technology content -->
-          <div class="section-content" id="technology-z-index">
-            <div id="column-container">
-              <!-- Tabs -->
-              <ul class="tabs" id="tab-container">
-                <li class="tab user-style-tab">
-                  <a href="#tech1">Frameworks</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#tech2">Databases</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#tech3">Languages</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#tech4">Other Tools</a>
-                </li>
+
+      <!-- ===== MAIN CONTENT ===== -->
+      <main class="content-grid">
+        <!-- TECHNOLOGIES -->
+        <section class="panel" id="technologies" aria-label="Technologies">
+          <h2 class="panel-title">
+            <span class="panel-title-bracket">[</span>
+            Technologies
+            <span class="panel-title-bracket">]</span>
+          </h2>
+          <div
+            class="tech-tabs"
+            role="tablist"
+            aria-label="Technology categories"
+          >
+            <button
+              class="tab-btn active"
+              data-target="languages"
+              role="tab"
+              aria-selected="true"
+              aria-controls="languages"
+            >
+              Programming Languages
+            </button>
+            <button
+              class="tab-btn"
+              data-target="frontend"
+              role="tab"
+              aria-selected="false"
+              aria-controls="frontend"
+            >
+              Front-End
+            </button>
+            <button
+              class="tab-btn"
+              data-target="backend"
+              role="tab"
+              aria-selected="false"
+              aria-controls="backend"
+            >
+              Back-End
+            </button>
+            <button
+              class="tab-btn"
+              data-target="devops"
+              role="tab"
+              aria-selected="false"
+              aria-controls="devops"
+            >
+              DevOps &amp; Tools
+            </button>
+          </div>
+          <div class="tab-panels">
+            <div class="tab-panel active" id="languages" role="tabpanel">
+              <ul class="tech-list">
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Python</li>
+                <li>Shell Scripting</li>
+                <li>CSS3</li>
+                <li>HTML5</li>
               </ul>
-              <!-- End of tabs -->
             </div>
-            <!-- Frameworks and Technologies -->
-            <div id="tech1" class="tech1">
-              <h4>Frameworks</h4>
-              <ul id="frameworks">
-                <li><p>Node.js</p></li>
-                <li><p>React.js</p></li>
-                <li><p>JQuery</p></li>
-                <li><p>Express.js</p></li>
-                <li><p>React Native</p></li>
+            <div class="tab-panel" id="frontend" role="tabpanel">
+              <ul class="tech-list">
+                <li>React</li>
+                <li>React Native</li>
+                <li>Redux</li>
+                <li>Zustand</li>
+                <li>Tailwind CSS</li>
+                <li>Bootstrap</li>
+                <li>Material-UI</li>
+                <li>Foundation</li>
               </ul>
             </div>
-            <!-- Databases -->
-            <div id="tech2" class="tech2">
-              <h4>Databases</h4>
-              <ul>
-                <li><p>MySQL</p></li>
-                <li><p>PostgreSQL</p></li>
-                <li><p>MongoDB</p></li>
+            <div class="tab-panel" id="backend" role="tabpanel">
+              <ul class="tech-list">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>MySQL</li>
+                <li>GraphQL</li>
+                <li>Apollo</li>
+                <li>Sequelize</li>
+                <li>Mongoose</li>
               </ul>
             </div>
-            <!-- Languages -->
-            <div id="tech3" class="tech3">
-              <h4>Languages</h4>
-              <ul>
-                <li><p>CSS3</p></li>
-                <li><p>HTML5</p></li>
-                <li><p>JavaScript</p></li>
-                <li><p>Kotlin</p></li>
-                <li><p>Python</p></li>
-                <li><p>Swift</p></li>
-                <li><p>TypeScript</p></li>
-              </ul>
-            </div>
-            <!-- Other Tools -->
-            <div id="tech4" class="tech4">
-              <h4>Other Tools</h4>
-              <ul>
-                <li><p>npm</p></li>
-                <li><p>Docker</p></li>
-                <li><p>Yarn</p></li>
-                <li><p>Homebrew</p></li>
-                <li><p>Visual Studio Code</p></li>
-                <li><p>Jira</p></li>
-                <li><p>Zoom</p></li>
-                <li><p>Microsoft Teams</p></li>
-                <li><p>Slack</p></li>
-                <li><p>Google Chat</p></li>
-                <li><p>Bootstrap</p></li>
-                <li><p>Materialize/MUI</p></li>
-                <li><p>Tailwind</p></li>
-                <li><p>Webpack</p></li>
-                <li><p>Zeppelin</p></li>
-                <li><p>GSAP</p></li>
-                <li><p>GraphQL/Apollo</p></li>
-                <li><p>Mongoose</p></li>
-                <li><p>Sequelize</p></li>
-                <li><p>Handlebars</p></li>
-                <li><p>Dbeaver</p></li>
-                <li><p>Insomnia</p></li>
-                <li><p>Postman</p></li>
-                <li><p>Git</p></li>
-                <li><p>JWT</p></li>
-                <li><p>Google Dev Suite</p></li>
-                <li><p>Adobe Creative Suite</p></li>
-                <li><p>Moment.js</p></li>
+            <div class="tab-panel" id="devops" role="tabpanel">
+              <ul class="tech-list">
+                <li>GitHub</li>
+                <li>GitLab</li>
+                <li>Bitbucket</li>
+                <li>Docker</li>
+                <li>AWS</li>
+                <li>CircleCI</li>
+                <li>Jest</li>
+                <li>GitHub Actions</li>
+                <li>Webpack</li>
+                <li>Vite</li>
               </ul>
             </div>
           </div>
-          <!-- End of technologies section -->
         </section>
-        <!-- end of technology row -->
-      </div>
-      <div class="work-row">
-        <!-- Work Section -->
-        <section id="work" class="flexbox">
-          <!-- section content -->
-          <div class="section-content">
-            <div id="column-container work-upper">
-              <!-- Tabs -->
-              <ul class="tabs" id="work-tabs">
-                <li class="tab user-style-tab">
-                  <a href="#work1" class="active">Readme Generator</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work2">Team Profile Generator</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work3">Note Taker</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work4">Password Generator</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work5">Coding Quiz</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work6">Weather Dashboard</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work7">Employee Tracker</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work8">Workday Scheduler</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work9">Blue Dog API</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work10">Alien Tech Blog</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work11">All Animal Rehab & Release</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work12">React Portfolio</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work13">Empty Resources (Shields)</a>
-                </li>
-                <li class="tab user-style-tab"><a href="#work14">PARSR</a></li>
-                <li class="tab user-style-tab">
-                  <a href="#work15">Normalize Rework</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work16">Jacob Elenius Website</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work17">K.I.T.T.I.E.S.</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work18">Social Network API</a>
-                </li>
-                <li class="tab user-style-tab">
-                  <a href="#work19">Booksearch</a>
-                </li>
+
+        <!-- ABOUT ME -->
+        <section class="panel" id="about-me" aria-label="About Me">
+          <h2 class="panel-title">
+            <span class="panel-title-bracket">[</span>
+            About Me
+            <span class="panel-title-bracket">]</span>
+          </h2>
+          <div class="about-badges">
+            <span class="badge">Developer</span>
+            <span class="badge">Vet Tech</span>
+            <span class="badge badge--location">South Dakota, US</span>
+          </div>
+          <div class="about-layout">
+            <nav class="about-nav" aria-label="About sections">
+              <ul id="about-nav-list">
+                <!-- populated by JS -->
               </ul>
-              <!-- End of tabs -->
-            </div>
-            <div id="work-carousel">
-              <div id="work1" class="work">
-                <h5>Readme Generator</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>Node</li>
-                  <li>Inquirer</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a
-                      href="https://github.com/404pandas/sarcasticProfessionalReadme"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work2" class="work">
-                <h5>Team Profile Generator</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>Node</li>
-                  <li>Inquirer</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/teamProfileGenerator"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work3" class="work">
-                <h5>Note Taker</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>Express</li>
-                  <li>Netlify</li>
-                  <li>MySQL</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/notetaker"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work4" class="work">
-                <h5>Password Generator</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/password-generator"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work5" class="work">
-                <h5>Coding Quiz</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/coding-quiz"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work6" class="work">
-                <h5>Weather Dashboard</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>JQuery</li>
-                  <li>Dayjs</li>
-                  <li>GSAP</li>
-                  <li>Materialize</li>
-                  <li>Node</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a
-                      href="https://github.com/404pandas/pooh-weather-dashboard"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work7" class="work">
-                <h5>Employee Tracker</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>MySQL</li>
-                  <li>Node</li>
-                  <li>Express</li>
-                  <li>Inquirer</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/employee-tracker"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work8" class="work">
-                <h5>Workday Scheduler</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>Node</li>
-                  <li>Express</li>
-                  <li>Moment.js</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/workday-scheduler"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work9" class="work">
-                <h5>Blue Dog API</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>Materialize</li>
-                  <li>Node.js</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/blue-dog-api"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work10" class="work">
-                <h5>Alien Tech Blog</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>Bcrypt</li>
-                  <li>MySQL</li>
-                  <li>Express</li>
-                  <li>Handlebars</li>
-                  <li>Materialize</li>
-                  <li>Sequelize</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/alien-tech-blog"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work11" class="work">
-                <h5>All Animal Rehab & Release</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>JQuery</li>
-                  <li>Materialize</li>
-                  <li>Node</li>
-                  <li>Express</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/all-animal-r-r"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work12" class="work">
-                <h5>React Portfolio</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>Node</li>
-                  <li>Express</li>
-                  <li>React</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/react-portfolio"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work13" class="work">
-                <h5>Empty Resources</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/empty-resources"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work14" class="work">
-                <h5>PARSR</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>Node</li>
-                  <li>Express</li>
-                  <li>React</li>
-                  <li>MongoDB</li>
-                  <li>MUI</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/PARSR"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work15" class="work">
-                <h5>Normalize Rework</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>CSS 3</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/normalize.css"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work16" class="work">
-                <h5>Jacob Elenius Website</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>React</li>
-                  <li>Express</li>
-                  <li>Node</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/jacob-elenius"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work17" class="work">
-                <h5>K.I.T.T.I.E.S.</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                  <li>Node</li>
-                  <li>Express</li>
-                  <li>Webpack</li>
-                  <li>Babel</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/pwa-kitties"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work18" class="work">
-                <h5>Social Network API</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/social-network-api"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
-              <div id="work19" class="work">
-                <h5>Book Search</h5>
-                <h5>Technologies:</h5>
-                <ul class="specific-work-ul">
-                  <li>JavaScript</li>
-                  <li>HTML 5</li>
-                  <li>CSS 3</li>
-                </ul>
-                <div class="flexbox work-links">
-                  <span
-                    ><a href="https://github.com/404pandas/"
-                      >Github Repo</a
-                    ></span
-                  >
-                </div>
-              </div>
+            </nav>
+            <div class="about-detail" id="about-detail" aria-live="polite">
+              <!-- populated by JS -->
             </div>
           </div>
-          <!-- end of work section -->
         </section>
-      </div>
-      <div id="about-me-row">
-        <!-- About Me Section -->
-        <section id="about-me" class="flexbox">
-          <!-- section content -->
-          <div class="section-content">
-            <h3>About Me</h3>
-            <ul>
-              <div id="top-list">
-                <li>Developer &&</li>
-                <li>Vet Tech</li>
-              </div>
-              <hr />
-              <div id="bottom-list">
-                <li>Tennessee, US</li>
-                <li>Washington, US</li>
-              </div>
+
+        <!-- WORK / PROJECTS -->
+        <section class="panel panel--wide" id="work" aria-label="Projects">
+          <h2 class="panel-title">
+            <span class="panel-title-bracket">[</span>
+            Projects
+            <span class="panel-title-bracket">]</span>
+          </h2>
+          <div class="work-layout">
+            <nav class="project-list" aria-label="Project list">
+              <ul id="project-nav-list">
+                <!-- populated by JS -->
+              </ul>
+            </nav>
+            <div class="project-detail" id="project-detail" aria-live="polite">
+              <!-- populated by JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="panel panel--wide" id="contact" aria-label="Contact">
+          <h2 class="panel-title">
+            <span class="panel-title-bracket">[</span>
+            Contact
+            <span class="panel-title-bracket">]</span>
+          </h2>
+          <div class="contact-content">
+            <ul class="contact-list">
+              <li>
+                <a href="tel:7728342342" class="contact-link">
+                  <i class="material-icons" aria-hidden="true">local_phone</i>
+                  <span>Phone</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:mary.panda.jackson@gmail.com"
+                  class="contact-link"
+                >
+                  <i class="material-icons" aria-hidden="true">email</i>
+                  <span>Email</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/404pandas"
+                  class="contact-link"
+                  aria-label="LinkedIn (link pending)"
+                >
+                  <i class="material-icons" aria-hidden="true">work</i>
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/404pandas"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="material-icons" aria-hidden="true">code</i>
+                  <span>GitHub</span>
+                </a>
+              </li>
             </ul>
-            <div id="about-p-tags">
-              <p>
-                I'm a full Stack Web Developer with a background in Computer
-                Science, Veterinary Technology, and Zoology. I possess a
-                life-long dedication to learning and helping animals.
-              </p>
-              <p>
-                I'm knowledgeable in user interface, testing, and debugging
-                processes. I bring forth expertise in design, installation,
-                testing and maintenance of web systems.
-              </p>
-              <p>
-                I'm fully equipped with a diverse and promising skill-set to
-                build any app you can think of.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="contact-row">
-        <!-- Contact Section -->
-        <section id="contact">
-          <!-- contact header -->
-          <h3>Contact</h3>
-          <div id="resume-download-container">
             <a
               href="./assets/MaryEleniusDevResume.pdf"
               download="MaryEleniusResume"
+              class="resume-btn"
             >
-              <i class="material-icons" id="resume-download-icon"
-                >arrow_downward
-              </i>
-              <p>Resume</p></a
-            >
-          </div>
-          <!-- contact content -->
-          <div id="contact-content">
-            <ul id="contact-ul">
-              <li>
-                <a href="tel:7728342342">
-                  <p>
-                    <i class="material-icons tiny left">local_phone </i>Phone
-                  </p>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:mary.panda.jackson@gmail.com">
-                  <p><i class="material-icons tiny left">email</i>Email</p>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <p>
-                    <i class="material-icons tiny left">assignment </i>LinkedIn
-                  </p></a
-                >
-              </li>
-              <li>
-                <a href="https://github.com/404pandas">
-                  <p><i class="material-icons tiny left">code</i>Github</p>
-                </a>
-              </li>
-            </ul>
-
-            <a
-              href="#modal2"
-              class="btn modal-trigger"
-              id="contact-form-trigger"
-            >
-              <p id="contact-icon" class="valign-wrapper">
-                <i class="material-icons tiny left">open_in_new</i>Contact Form
-              </p>
-            </a>
-
-            <!-- <div id="modal2" class="modal">
-              <div class="modal-content">
-                <h2>Contact Me</h2>
-                <p>ALERT- This form is not functional until I learn PHP</p>
-                <div id="contact-area">
-                  <form method="post" action="contactengine.php">
-                    <label for="Name">Name:</label>
-                    <input type="text" name="Name" id="Name" />
-
-                    <label for="Email">Email:</label>
-                    <input type="text" name="Email" id="Email" />
-
-                    <label for="Message">Message:</label><br />
-                    <textarea
-                      name="Message"
-                      rows="20"
-                      cols="20"
-                      id="Message"
-                    ></textarea>
-
-                    <input
-                      type="submit"
-                      name="submit"
-                      value="Submit"
-                      class="submit-button"
-                    />
-                  </form>
-                </div>
-                <div id="modal-p">
-                  <p>
-                    Base code for contact form by
-                    <a href="http://css-tricks.com"
-                      >Chris Coyier at CSS-Tricks</a
-                    >
-                  </p>
-                  <p>Additional styling provided by myself</p>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <a href="#" class="modal-close btn-flat">Close</a>
-              </div>
-            </div> -->
-          </div>
-          <!-- End of contact section -->
-        </section>
-      </div>
-      <!-- End of row -->
-      <div class="resume-row">
-        <!-- Resume Section -->
-        <section id="resume" class="flexbox">
-          <!-- section content -->
-          <div class="section-content">
-            <h3>resume</h3>
-            <!-- Download Icon -->
-            <p>Download Machine Readable Resume</p>
-          </div>
-          <!-- End of Resume section -->
-        </section>
-      </div>
-      <!-- <div class="row"> -->
-      <!-- Extra Section -->
-      <!-- <section id="extra" class="col s5 flexbox"> -->
-      <!-- section content -->
-      <!-- <div id="section-content">
-            <div>
-              <p>
-                I literally have no idea what else to add but here's a container
-                I guess
-              </p>
-            </div> -->
-      <!-- </div> -->
-      <!-- end of Extra section -->
-      <!-- </section>
-      </div> -->
-    </div>
-    <!-- Modal -->
-    <div id="modal-container" class="flexbox">
-      <div id="modal1" class="modal flexbox">
-        <div class="modal-content" id="panda-modal-content">
-          <h5>Mind the Mess</h5>
-          <img id="messy-panda" src="./assets/images/mind-the-mess.png" alt="Mind the Mess - Website in Development" />
-          <div id="modal-text">
-            <p>Website in development</p>
-            <a class="btn" id="react-btn" href="https://404pandas.netlify.app/">
-              Simplified Portfolio
+              <i class="material-icons" aria-hidden="true">arrow_downward</i>
+              Download Resume
             </a>
           </div>
-        </div>
-        <div class="modal-footer">
-          <a
-            href="#"
-            class="modal-close waves-effect waves-green btn-flat"
-            id="close-button"
-            >Close</a
-          >
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
-    <!-- script link -->
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
